@@ -3,7 +3,8 @@ Documentation   Arquivo com as funcionalidades da página de resultado de pesqui
 
 *** Variables ***
 ${SPAN_TITLE}    \div[data-cel-widget='search_result_0'] span span
-${SPAN_RESULT}    h2 > a > span
+# ${SPAN_RESULT}    h2 > a > span
+${SPAN_RESULT}    div.sg-col-inner div div > a
 
 *** Keywords ***
 Text Should Be Displayed In The Results Page

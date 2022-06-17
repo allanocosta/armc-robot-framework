@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220617 18:25:23.946" rpa="false" schemaversion="3">
+<suite id="s1" name="Armc-Robot-Framework" source="C:\Automation\armc-robot-framework">
+<suite id="s1-s1" name="WebApplicationTest" source="C:\Automation\armc-robot-framework\WebApplicationTest">
+<suite id="s1-s1-s1" name="Amazon" source="C:\Automation\armc-robot-framework\WebApplicationTest\Amazon">
+<suite id="s1-s1-s1-s1" name="Tests" source="C:\Automation\armc-robot-framework\WebApplicationTest\Amazon\tests">
+<suite id="s1-s1-s1-s1-s1" name="Amazon tests" source="C:\Automation\armc-robot-framework\WebApplicationTest\Amazon\tests\Amazon_tests.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="CT 03 - Add Product to Cart" line="30">
+<kw name="Start Session" library="base" type="SETUP">
+<kw name="New Browser" library="Browser">
+<arg>${Browser}</arg>
+<arg>${Headless}</arg>
+<arg>timeout=01:00</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20220617 18:25:24.699" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 60000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "C:\\Automation\\armc-robot-framework\\results\\browser\\traces\\ced9e8a4-c4fa-4c32-b4c1-148ac44846f2"}</msg>
+<msg timestamp="20220617 18:25:26.327" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":60000,"devtools":false,"slowMo":0,"tracesDir":"C:\\Automation\\armc-robot-framework\\results\\browser\\traces\\ced9e8a4-c4fa-4c32-b4c1-148ac44846f2"}</msg>
+<status status="PASS" starttime="20220617 18:25:24.699" endtime="20220617 18:25:26.327"/>
+</kw>
+<kw name="New Context" library="Browser">
+<arg>viewport=${Viewport}</arg>
+<arg>colorScheme=${ColorScheme}</arg>
+<arg>recordVideo=${RecordVideo}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20220617 18:25:26.329" level="INFO">{"acceptDownloads": true, "ignoreHTTPSErrors": false, "bypassCSP": false, "viewport": {"height": 1000, "width": 1900}, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "colorScheme": "dark", "hideRfBrowser": false, "recordVideo": {"size": {"width": 1920, "height": 1080}, "dir": "C:\\Automation\\armc-robot-framework\\results\\browser\\video\\videos"}, "reducedMotion": "no-preference", "forcedColors": "none"}</msg>
+<msg timestamp="20220617 18:25:26.339" level="INFO">Successfully created context. </msg>
+<msg timestamp="20220617 18:25:26.339" level="INFO">{'acceptDownloads': True, 'ignoreHTTPSErrors': False, 'bypassCSP': False, 'viewport': {'height': 1000, 'width': 1900}, 'deviceScaleFactor': 1, 'isMobile': False, 'hasTouch': False, 'javaScriptEnabled': True, 'offline': False, 'colorScheme': 'dark', 'hideRfBrowser': False, 'recordVideo': {'size': {'width': 1920, 'height': 1080}, 'dir': 'C:\\Automation\\armc-robot-framework\\results\\browser\\video\\videos'}, 'reducedMotion': 'no-preference', 'forcedColors': 'none'}</msg>
+<status status="PASS" starttime="20220617 18:25:26.327" endtime="20220617 18:25:26.339"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${Url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20220617 18:25:28.506" level="INFO">Successfully initialized new page object and opened url: https://www.amazon.com.br</msg>
+<msg timestamp="20220617 18:25:28.506" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;video width="1920" height="1080" controls&gt;&lt;source src="browser/video/videos/e0f09aa05f4c50661bc124dea455544f.webm" type="video/webm"&gt;&lt;/video&gt;</msg>
+<status status="PASS" starttime="20220617 18:25:26.339" endtime="20220617 18:25:28.507"/>
+</kw>
+<kw name="Get Title" library="Browser">
+<arg>==</arg>
+<arg>${TitlePage}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" starttime="20220617 18:25:28.507" endtime="20220617 18:25:28.556"/>
+</kw>
+<status status="PASS" starttime="20220617 18:25:24.698" endtime="20220617 18:25:28.557"/>
+</kw>
+<kw name="Search By" library="header">
+<arg>Xbox Series S</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${SEARCH_BAR}</arg>
+<arg>${ProductName}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220617 18:25:28.558" level="INFO">Fills the text 'Xbox Series S' in the given field.</msg>
+<status status="PASS" starttime="20220617 18:25:28.558" endtime="20220617 18:25:28.845"/>
+</kw>
+<status status="PASS" starttime="20220617 18:25:28.557" endtime="20220617 18:25:28.846"/>
+</kw>
+<kw name="Click Search Button" library="header">
+<kw name="Click" library="Browser">
+<arg>${SEARCH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220617 18:25:28.847" endtime="20220617 18:25:30.190"/>
+</kw>
+<status status="PASS" starttime="20220617 18:25:28.847" endtime="20220617 18:25:30.190"/>
+</kw>
+<kw name="Text Should Be Displayed In The Results Page" library="searchResultsPage">
+<arg>RESULTADOS</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${SPAN_TITLE} &gt;&gt; "${Text}"</arg>
+<arg>visible</arg>
+<arg>30</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20220617 18:25:31.382" level="INFO">Waited for Element with selector div[data-cel-widget='search_result_0'] span span &gt;&gt; "RESULTADOS" at state visible</msg>
+<status status="PASS" starttime="20220617 18:25:30.191" endtime="20220617 18:25:31.382"/>
+</kw>
+<status status="PASS" starttime="20220617 18:25:30.191" endtime="20220617 18:25:31.382"/>
+</kw>
+<kw name="Text Should Be Displayed In The Search Result" library="searchResultsPage">
+<arg>Console Xbox Series S</arg>
+<kw name="Get Element Count" library="Browser">
+<arg>${SPAN_RESULT} &gt;&gt; "${Text}"</arg>
+<arg>\&gt;=</arg>
+<arg>1</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<msg timestamp="20220617 18:25:32.706" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220617 18:25:32.707" level="FAIL">Element count for selector `div.sg-col-inner div div &gt; a &gt;&gt; "Console Xbox Series S"` is '0' (int) should be greater than or equal '1.0' (float)</msg>
+<status status="FAIL" starttime="20220617 18:25:31.383" endtime="20220617 18:25:32.709"/>
+</kw>
+<kw name="Scroll To Element" library="Browser">
+<arg>${SPAN_RESULT} &gt;&gt; "${Text}"</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="NOT RUN" starttime="20220617 18:25:32.709" endtime="20220617 18:25:32.709"/>
+</kw>
+<status status="FAIL" starttime="20220617 18:25:31.383" endtime="20220617 18:25:32.710"/>
+</kw>
+<kw name="Go To Product Page" library="searchResultsPage">
+<arg>Console Xbox Series S</arg>
+<status status="NOT RUN" starttime="20220617 18:25:32.710" endtime="20220617 18:25:32.710"/>
+</kw>
+<kw name="Add To Cart" library="productPage">
+<arg>Console Xbox Series S</arg>
+<status status="NOT RUN" starttime="20220617 18:25:32.710" endtime="20220617 18:25:32.710"/>
+</kw>
+<kw name="Go To Cart" library="header">
+<status status="NOT RUN" starttime="20220617 18:25:32.710" endtime="20220617 18:25:32.710"/>
+</kw>
+<kw name="Product Should Be In Cart" library="cartPage">
+<arg>Console Xbox Series S</arg>
+<status status="NOT RUN" starttime="20220617 18:25:32.711" endtime="20220617 18:25:32.711"/>
+</kw>
+<kw name="ScreenShot" library="base" type="TEARDOWN">
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20220617 18:25:33.112" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220617 18:25:32.711" endtime="20220617 18:25:33.112"/>
+</kw>
+<status status="PASS" starttime="20220617 18:25:32.711" endtime="20220617 18:25:33.112"/>
+</kw>
+<doc>Testar e verificar a adição de um produto no carrinho de compras</doc>
+<tag>add_cart</tag>
+<status status="FAIL" starttime="20220617 18:25:24.696" endtime="20220617 18:25:33.112">Element count for selector `div.sg-col-inner div div &gt; a &gt;&gt; "Console Xbox Series S"` is '0' (int) should be greater than or equal '1.0' (float)</status>
+</test>
+<kw name="Fechar Navegador" library="base" type="TEARDOWN">
+<kw name="Close Browser" library="Browser">
+<arg>ALL</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20220617 18:25:33.885" level="INFO">Closed all browsers</msg>
+<status status="PASS" starttime="20220617 18:25:33.847" endtime="20220617 18:25:33.885"/>
+</kw>
+<status status="PASS" starttime="20220617 18:25:33.847" endtime="20220617 18:25:33.885"/>
+</kw>
+<doc>Suite de testes para o site Amazon.com.br</doc>
+<status status="FAIL" starttime="20220617 18:25:23.971" endtime="20220617 18:25:33.885"/>
+</suite>
+<status status="FAIL" starttime="20220617 18:25:23.969" endtime="20220617 18:25:33.888"/>
+</suite>
+<status status="FAIL" starttime="20220617 18:25:23.967" endtime="20220617 18:25:33.890"/>
+</suite>
+<status status="FAIL" starttime="20220617 18:25:23.965" endtime="20220617 18:25:33.891"/>
+</suite>
+<status status="FAIL" starttime="20220617 18:25:23.948" endtime="20220617 18:25:33.892"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">add_cart</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Armc-Robot-Framework">Armc-Robot-Framework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="WebApplicationTest">Armc-Robot-Framework.WebApplicationTest</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Amazon">Armc-Robot-Framework.WebApplicationTest.Amazon</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Tests">Armc-Robot-Framework.WebApplicationTest.Amazon.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="Amazon tests">Armc-Robot-Framework.WebApplicationTest.Amazon.Tests.Amazon tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
