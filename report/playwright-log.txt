@@ -1,0 +1,81 @@
+{"level":30,"time":"2022-06-20T21:29:36.947Z","pid":11596,"hostname":"ARMCOSTA","msg":"Listening on 60409"}
+{"level":30,"time":"2022-06-20T21:29:37.009Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-20T21:29:37.013Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-20T21:29:37.015Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-20T21:29:37.015Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-20T21:29:37.018Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2022-06-20T21:29:38.695Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method newBrowser"}
+{"level":30,"time":"2022-06-20T21:29:38.699Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method newContext"}
+{"level":30,"time":"2022-06-20T21:29:38.699Z","pid":11596,"hostname":"ARMCOSTA","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2022-06-20T21:29:38.699Z","pid":11596,"hostname":"ARMCOSTA","msg":"Trace file: "}
+{"level":30,"time":"2022-06-20T21:29:38.707Z","pid":11596,"hostname":"ARMCOSTA","msg":"Changed active context"}
+{"level":30,"time":"2022-06-20T21:29:38.707Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method newContext"}
+{"level":30,"time":"2022-06-20T21:29:38.709Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method newPage"}
+{"level":30,"time":"2022-06-20T21:29:38.709Z","pid":11596,"hostname":"ARMCOSTA","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2022-06-20T21:29:38.931Z","pid":11596,"hostname":"ARMCOSTA","msg":"Video path: G:\\Automation\\armc-robot-framework\\report\\browser\\video\\videos\\69d58e77c0cb01f36105e660a6f03cb1.webm"}
+{"level":30,"time":"2022-06-20T21:29:38.931Z","pid":11596,"hostname":"ARMCOSTA","msg":"Changed active page"}
+{"level":30,"time":"2022-06-20T21:29:44.047Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method newPage"}
+{"level":30,"time":"2022-06-20T21:29:44.057Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-06-20T21:29:44.057Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is enabled, find Locator with #twotabsearchtextbox in page."}
+{"level":30,"time":"2022-06-20T21:29:44.112Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method fillText"}
+{"level":30,"time":"2022-06-20T21:29:44.119Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method click"}
+{"level":30,"time":"2022-06-20T21:29:44.119Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is enabled, find Locator with #nav-search-submit-button in page."}
+{"level":30,"time":"2022-06-20T21:29:45.345Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method click"}
+{"level":30,"time":"2022-06-20T21:29:45.349Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2022-06-20T21:29:45.349Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is enabled, find Locator with div[data-cel-widget='search_result_0'] span span >> \"RESULTADOS\" in page."}
+{"level":30,"time":"2022-06-20T21:29:46.657Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2022-06-20T21:29:46.660Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2022-06-20T21:29:46.661Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is disabled, return Locator: div.s-search-results > div > div > div > div > div > div > div > h2 > a > span >> \"Console Xbox Series S\" in page."}
+{"level":30,"time":"2022-06-20T21:29:46.674Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method getElementCount"}
+{"level":30,"time":"2022-06-20T21:29:46.677Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method scrollToElement"}
+{"level":30,"time":"2022-06-20T21:29:46.677Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is enabled, find Locator with div.s-search-results > div > div > div > div > div > div > div > h2 > a > span >> \"Console Xbox Series S\" in page."}
+{"level":30,"time":"2022-06-20T21:29:46.733Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method scrollToElement"}
+{"level":30,"time":"2022-06-20T21:29:46.736Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method click"}
+{"level":30,"time":"2022-06-20T21:29:46.737Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is enabled, find Locator with div.s-search-results > div > div > div > div > div > div > div > h2 > a > span >> \"Console Xbox Series S\" in page."}
+{"level":30,"time":"2022-06-20T21:29:48.165Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method click"}
+{"level":30,"time":"2022-06-20T21:29:48.168Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method getText"}
+{"level":30,"time":"2022-06-20T21:29:48.169Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is enabled, find Locator with span#productTitle in page."}
+{"level":30,"time":"2022-06-20T21:29:48.631Z","pid":11596,"hostname":"ARMCOSTA","msg":"Retrieved text for element span#productTitle containing Console Xbox Series S"}
+{"level":30,"time":"2022-06-20T21:29:48.631Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method getText"}
+{"level":30,"time":"2022-06-20T21:29:48.635Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method click"}
+{"level":30,"time":"2022-06-20T21:29:48.635Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is enabled, find Locator with input#add-to-cart-button in page."}
+{"level":30,"time":"2022-06-20T21:29:49.721Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method click"}
+{"level":30,"time":"2022-06-20T21:29:49.724Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2022-06-20T21:29:49.725Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is enabled, find Locator with a#nav-cart in page."}
+{"level":30,"time":"2022-06-20T21:29:49.832Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2022-06-20T21:29:49.835Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method click"}
+{"level":30,"time":"2022-06-20T21:29:49.835Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is enabled, find Locator with a#nav-cart in page."}
+{"level":30,"time":"2022-06-20T21:29:51.648Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method click"}
+{"level":30,"time":"2022-06-20T21:29:51.652Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2022-06-20T21:29:51.652Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is enabled, find Locator with div#sc-active-cart in page."}
+{"level":30,"time":"2022-06-20T21:29:51.839Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2022-06-20T21:29:51.842Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2022-06-20T21:29:51.842Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is disabled, return Locator: .a-size-medium > span.a-truncate-cut >> \"Console Xbox Series S\" in page."}
+{"level":30,"time":"2022-06-20T21:29:51.868Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method getElementCount"}
+{"level":30,"time":"2022-06-20T21:29:51.880Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2022-06-20T21:29:51.880Z","pid":11596,"hostname":"ARMCOSTA","msg":"Strict mode is disabled, return Locator: .a-size-medium > span.a-truncate-cut >> \"Console Xbox Series S\" in page."}
+{"level":30,"time":"2022-06-20T21:29:51.986Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method getElementCount"}
+{"level":30,"time":"2022-06-20T21:29:51.992Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2022-06-20T21:29:52.264Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2022-06-20T21:29:52.269Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-20T21:29:52.327Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-20T21:29:52.336Z","pid":11596,"hostname":"ARMCOSTA","msg":"Changed active context"}
+{"level":30,"time":"2022-06-20T21:29:52.336Z","pid":11596,"hostname":"ARMCOSTA","msg":"Changing current active page"}
+{"level":30,"time":"2022-06-20T21:29:52.336Z","pid":11596,"hostname":"ARMCOSTA","msg":"Changed active page"}
+{"level":30,"time":"2022-06-20T21:29:52.341Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-20T21:29:52.343Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-20T21:29:52.345Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2022-06-20T21:29:52.346Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2022-06-20T21:29:52.347Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2022-06-20T21:29:52.347Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2022-06-20T21:29:52.350Z","pid":11596,"hostname":"ARMCOSTA","msg":"Changed active context"}
+{"level":30,"time":"2022-06-20T21:29:52.351Z","pid":11596,"hostname":"ARMCOSTA","msg":"Changing current active page"}
+{"level":30,"time":"2022-06-20T21:29:52.351Z","pid":11596,"hostname":"ARMCOSTA","msg":"Changed active page"}
+{"level":30,"time":"2022-06-20T21:29:52.353Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method closeContext"}
+{"level":30,"time":"2022-06-20T21:29:53.059Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method closeContext"}
+{"level":30,"time":"2022-06-20T21:29:53.062Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2022-06-20T21:29:53.092Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2022-06-20T21:29:53.094Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-20T21:29:53.094Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-20T21:29:53.122Z","pid":11596,"hostname":"ARMCOSTA","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2022-06-20T21:29:53.122Z","pid":11596,"hostname":"ARMCOSTA","msg":"End of node method closeAllBrowsers"}
