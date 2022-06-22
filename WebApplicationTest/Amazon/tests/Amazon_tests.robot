@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Suite de testes para o site Amazon.com.br
 
-Resource    ${EXECDIR}/resources/base.robot
+Resource    ${CURDIR}${/}..\\resources\\base.robot
 
 Test Setup    Start Session
 Test Teardown    ScreenShot
