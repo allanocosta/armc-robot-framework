@@ -6,17 +6,32 @@ Library             Collections
 
 
 *** Variables ***
-${URL_API}      https://fakerestapi.azurewebsites.net
+${url_api}          https://fakerestapi.azurewebsites.net
+&{activity_8}       id=0
+...                 title=string
+...                 dueDate=2022-06-25T20:43:48.727Z
+...                 completed=true
 
 
 *** Keywords ***
 Connect To API
-    Create Session    fakeApi    ${URL_API}
+    Create Session    fakeApi    ${url_api}
 
-Get All Activities
-    ${RESPONSE}    GET On Session    fakeApi    /api/v1/Activities
-    Log    ${RESPONSE.text}
+Request All Activities
+    ${response_code}    GET On Session    fakeApi    /api/v1/Activities
+    Log    ${response_code.text}
+    Set Test Variable    ${response_code}
+
+Request The Activity "${id_activity}"
+    ${response_code}    GET On Session    fakeApi    /api/v1/Activities/${id_activity}
+    Log    ${response_code.text}
+    Set Test Variable    ${response_code}
 
 Status Code Should Be
-    [Arguments]    ${STATUS_CODE}
-    Status Should Be    ${STATUS_CODE}
+    [Arguments]    ${status_code}
+    Status Should Be    ${status_code}
+
+Response Code Shoul Be "${qty_items}" items
+    Length Should Be    ${response_code.json()}    ${qty_items}
+
+    
