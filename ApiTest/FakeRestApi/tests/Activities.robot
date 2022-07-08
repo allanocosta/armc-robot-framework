@@ -23,7 +23,12 @@ Search For An Activity By Specific Id
     Check If The Response The Activity 8 Is Correct
 
 Add A New Activity
-    [Documentation]    Validate the creation a new activity
+    [Documentation]    Validate creation a new activity
     [Tags]    api    fakerestapi    activities    post_new_activity
     Create A New Activity
+				Status Code Should Be    200
     Check If The Response The New Activity Is Correct
+
+Edit An Existing Activity
+    [Documentation]    Validate editing an activity
+    [Tags]    api    fakerestapi    activities    put_edit_activity
