@@ -1,19 +1,23 @@
 *** Settings ***
-Documentation   Arquivo com as funcionalidades do header da página
+Documentation       Arquivo com as funcionalidades do header da página
+
+Resource            ..\\base.robot
+
 
 *** Variables ***
-${SEARCH_BAR}    \#twotabsearchtextbox
+${SEARCH_BAR}       \#twotabsearchtextbox
 ${SEARCH_BUTTON}    \#nav-search-submit-button
-${CART_BUTTON}    a#nav-cart
-${DIV_MENU}    \#nav-xshop
+${CART_BUTTON}      a#nav-cart
+${DIV_MENU}         \#nav-xshop
+
 
 *** Keywords ***
 Click Menu
-    [Arguments]     ${Menu}
+    [Arguments]    ${Menu}
     Click    ${DIV_MENU} >> "${Menu}"
 
 Search By
-    [Arguments]     ${ProductName}
+    [Arguments]    ${ProductName}
     Fill Text    ${SEARCH_BAR}    ${ProductName}
 
 Click Search Button

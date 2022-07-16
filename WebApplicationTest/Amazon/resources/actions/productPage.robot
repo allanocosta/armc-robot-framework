@@ -1,12 +1,16 @@
 *** Settings ***
-Documentation   Arquivo com as funcionalidades da página do produto
+Documentation       Arquivo com as funcionalidades da página do produto
+
+Resource            ..\\base.robot
+
 
 *** Variables ***
-${SPAN_PRODUCT_TITLE}    span#productTitle
-${BTN_ADD_TO_CART}    input#add-to-cart-button
+${SPAN_PRODUCT_TITLE}       span#productTitle
+${BTN_ADD_TO_CART}          input#add-to-cart-button
+
 
 *** Keywords ***
 Add To Cart
-    [Arguments]     ${Product}
+    [Arguments]    ${Product}
     Get Text    ${SPAN_PRODUCT_TITLE}    ==    ${Product}
     Click    ${BTN_ADD_TO_CART}
