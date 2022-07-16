@@ -14,6 +14,11 @@ ${url_api}          https://fakerestapi.azurewebsites.net
 ...                 title=My New Activity
 ...                 dueDate=2022-07-08T13:41:57.436Z
 ...                 completed=True
+...                 completed=True
+&{edited_activity}  id=23
+...                 title=Edited Activity
+...                 dueDate=2022-07-08T13:41:57.436Z
+...                 completed=True
 
 
 *** Keywords ***
@@ -46,6 +51,11 @@ Edit The Activity "${activity_id}"
     Log    ${response_code.text}
     Set Test Variable    ${response_code}
 
+Delete The Activity "${activity_id}"
+    ${response_code}    DELETE On Session    fakeApi    /api/v1/Activities/${activity_id}
+    Log    ${response_code.text}
+    Set Test Variable    ${response_code}
+
 Status Code Should Be
     [Arguments]    ${status_code}
     Status Should Be    ${status_code}
@@ -64,3 +74,12 @@ Check If The Response The New Activity Is Correct
     Dictionary Should Contain Item    ${response_code.json()}    title    ${new_activity.title}
     Dictionary Should Contain Item    ${response_code.json()}    dueDate    ${new_activity.dueDate}
     Dictionary Should Contain Item    ${response_code.json()}    completed    ${new_activity.completed}
+
+Check If The Response The Edited Activity Is Correct
+    Dictionary Should Contain Item    ${response_code.json()}    id    ${edited_activity.id}
+    Dictionary Should Contain Item    ${response_code.json()}    title    ${edited_activity.title}
+    Should Not Be Empty    ${response_code.json()["dueDate"]}
+    Dictionary Should Contain Item    ${response_code.json()}    completed    ${edited_activity.completed}
+
+Check If Activity Is Deleted
+    Should Be Empty    ${response_code.content}

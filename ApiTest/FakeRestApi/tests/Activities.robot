@@ -32,3 +32,13 @@ Add A New Activity
 Edit An Existing Activity
     [Documentation]    Validate editing an activity
     [Tags]    api    fakerestapi    activities    put_edit_activity
+    Edit The Activity "17"
+				Status Code Should Be    200
+    Check If The Response The Edited Activity Is Correct
+
+Delete An Existing Activity
+    [Documentation]    Validate deleting an activity
+    [Tags]    api    fakerestapi    activities    delete_activity
+				Delete The Activity "4"
+    Status Code Should Be    200
+    Check If Activity Is Deleted
