@@ -13,7 +13,7 @@ Resource            actions/searchResultsPage.robot
 *** Variables ***
 ${Browser}          chromium
 ${Headless}         true
-${Viewport}         {'width': 1900,'height': 1000}
+${Viewport}         {'width': 1880,'height': 980}
 ${RecordVideo}      {'dir':'videos', 'size':{'width':1920, 'height':1080}}
 ${ColorScheme}      dark
 
