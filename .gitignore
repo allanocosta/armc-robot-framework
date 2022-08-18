@@ -28,6 +28,7 @@ dist/
 
 # Unit test reports
 TEST*.xml
+output*.xml
 report/**/*
 reports/**/*
 result/**/*
