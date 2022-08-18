@@ -3,9 +3,10 @@ Documentation       Suite de testes para o site Amazon.com.br
 
 Resource            ${CURDIR}${/}..\\resources\\base.robot
 
-Suite Teardown      Fechar Navegador
-Test Setup          Start Session
+Suite Setup         Start Session
+Test Setup          Go To Homepage
 Test Teardown       ScreenShot
+Suite Teardown      Close Session
 
 
 *** Test Cases ***
@@ -30,7 +31,7 @@ CT 02 - Search a Product
 
 CT 03 - Add Product to Cart
     [Documentation]    Testar e verificar a adição de um produto no carrinho de compras
-    [Tags]    add_cart
+    [Tags]    functional    regression    add_cart
 
     Search By    Xbox Series S
     Click Search Button
@@ -43,7 +44,7 @@ CT 03 - Add Product to Cart
 
 CT 04 - Remove Product to Cart
     [Documentation]    Testar e verificar a remoção de um produto no carrinho de compras
-    [Tags]    remove_cart
+    [Tags]    functional    regression    remove_cart
 
     Search By    Xbox Series S
     Click Search Button
