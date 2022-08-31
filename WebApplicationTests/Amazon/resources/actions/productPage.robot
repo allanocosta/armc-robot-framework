@@ -1,9 +1,6 @@
 *** Settings ***
 Documentation       Arquivo com as funcionalidades da página do produto
 
-Resource            ..\\base.robot
-
-
 *** Variables ***
 ${SPAN_PRODUCT_TITLE}       span#productTitle
 ${BTN_ADD_TO_CART}          input#add-to-cart-button

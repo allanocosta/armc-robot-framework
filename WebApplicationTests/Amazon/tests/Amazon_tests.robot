@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Suite de testes para o site Amazon.com.br
 
-Resource            ${CURDIR}${/}..\\resources\\base.robot
+Resource            ${CURDIR}\\..\\resources\\base.robot
 
 Suite Setup         Start Session
 Test Setup          Go To Homepage

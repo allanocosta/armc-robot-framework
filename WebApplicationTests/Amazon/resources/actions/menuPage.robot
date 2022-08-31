@@ -1,9 +1,6 @@
 *** Settings ***
 Documentation       Arquivo com as funcionalidades da página de menu
 
-Resource            ..\\base.robot
-
-
 *** Variables ***
 ${H1_TITLE}                 .acsUxWidget h1
 ${SPAN_CATEGORY_ITEM}       \#nav-subnav .nav-a-content

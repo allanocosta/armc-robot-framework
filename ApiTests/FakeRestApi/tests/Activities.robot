@@ -1,8 +1,7 @@
 *** Settings ***
 Documentation       Documentação da API: https://fakerestapi.azurewebsites.net/index.html
 
-Resource            ${CURDIR}${/}..\\resources\\base.robot
-Resource            ../resources/base.robot
+Resource            ${CURDIR}\\..\\resources\\base.robot
 
 Suite Setup         Connect To API
 
