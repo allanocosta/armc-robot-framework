@@ -12,7 +12,7 @@ Suite Teardown      Close Session
 *** Test Cases ***
 CT 01 - Access "Eletrônicos" Menu
     [Documentation]    Validar o acesso ao menu "Eletrônicos" e verifica a categoria "Computadores e Informática"
-    [Tags]    functional    regression    menu    category
+    [Tags]    webtest    functional    regression    menu    category
 
     Click Menu    Eletrônicos
     Page Title Should Be    Eletrônicos e Tecnologia | Amazon.com.br
@@ -22,7 +22,7 @@ CT 01 - Access "Eletrônicos" Menu
 CT 02 - Search a Product
     [Documentation]    Testar a busca do produto "Xbox Series S" através do campo de pesquisa
     ...    e validar o resultado da pesquisa
-    [Tags]    functional    regression    search_product
+    [Tags]    webtest    functional    regression    search_product
 
     Search By    Xbox Series S
     Click Search Button
@@ -31,7 +31,7 @@ CT 02 - Search a Product
 
 CT 03 - Add Product to Cart
     [Documentation]    Testar e verificar a adição de um produto no carrinho de compras
-    [Tags]    functional    regression    add_cart
+    [Tags]    webtest    functional    regression    add_cart
 
     Search By    Xbox Series S
     Click Search Button
@@ -44,7 +44,7 @@ CT 03 - Add Product to Cart
 
 CT 04 - Remove Product to Cart
     [Documentation]    Testar e verificar a remoção de um produto no carrinho de compras
-    [Tags]    functional    regression    remove_cart
+    [Tags]    webtest    functional    regression    remove_cart
 
     Search By    Xbox Series S
     Click Search Button

@@ -1,0 +1,17 @@
+# Ignore artifacts:
+
+# Ignored files:
+*.html
+*.png
+*.jpeg
+*.jpg
+*.mp4
+*.mp3
+*.avi
+*.yaml
+*.yml
+*.json
+*.feature
+*.features
+.prettierignore
+.gitignore
