@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.1.0] - 2022-07-13
-
 ### Added
+
+## [1.1.0] - 2022-09-13
+
+ - Adicionado testes de serviços utilizando a API [FakeRestAPI](https://fakerestapi.azurewebsites.net/)
+	- Adicionado testes de Mobile Android utlizando o aplicativo Training Wheels Protocol (TWP)
 
 ## [1.0.0] - 2022-07-08
 
