@@ -1,12 +1,12 @@
 *** Settings ***
 Documentation       Suite de testes para o site Amazon.com.br
 
-Resource            ${CURDIR}\\..\\resources\\base.robot
+Resource            ${CURDIR}\\..\\resources\\base.resource
 
 Suite Setup         Start Session
+Suite Teardown      Close Session
 Test Setup          Go To Homepage
 Test Teardown       ScreenShot
-Suite Teardown      Close Session
 
 
 *** Test Cases ***

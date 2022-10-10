@@ -1,13 +1,14 @@
 *** Settings ***
-Library    AppiumLibrary
+Library     AppiumLibrary
+Resource    actions/navBar.resource
 
-Resource    actions/navBar.robot
 
 *** Variables ***
-${APPIUM_TIMEOUT}    5
-${PLATAFORM_NAME}    Android
-${DEVICE_NAME}    Android Emulator
-${APP}    ${CURDIR}\\..\\app\\twp.apk
+${APPIUM_TIMEOUT}       5
+${PLATAFORM_NAME}       Android
+${DEVICE_NAME}          Android Emulator
+${APP}                  ${CURDIR}\\..\\app\\twp.apk
+
 
 *** Keywords ***
 Start Session
@@ -22,9 +23,9 @@ Start Session
 Finish Session
     Close All Applications
 
-Clicar em começar
+Clicar Em Começar
     Click Text    COMEÇAR
 
-Validar texto da descrição do app
+Validar Texto Da Descrição Do App
     [Arguments]    ${TEXT}
     Element Should Contain Text    io.qaninja.android.twp:id/mi_description    ${TEXT}
