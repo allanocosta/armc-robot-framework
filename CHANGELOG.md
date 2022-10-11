@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+## [1.1.0] - 2022-10-10
+
+ - Adicionado tox-dev e robotidy ao projeto para execução dos testes sem a necessidade de instalação das dependencias locais e para padronização de código
+
 ## [1.1.0] - 2022-09-13
 
  - Adicionado testes de serviços utilizando a API [FakeRestAPI](https://fakerestapi.azurewebsites.net/)
