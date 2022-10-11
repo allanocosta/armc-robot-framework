@@ -1,0 +1,16 @@
+[tool.robotidy]
+diff = true
+spacecount = 2
+continuation-indent = 4
+line-length = 90
+transform = [
+   "DiscardEmptySections:allow_only_comments=True",
+   "SplitTooLongLine"
+]
+[tool.robocop]
+configure = [
+    "line-too-long:line_length:130"
+]
+language = [
+    "pt"
+]

@@ -1,11 +1,15 @@
 *** Settings ***
-Resource    ${CURDIR}\\..\\resources\\base.robot
+Documentation       Suite de testes da home page
 
-Test Setup    Start Session
-Suite Teardown    Finish Session
+Resource            ${CURDIR}\\..\\resources\\base.resource
+
+Test Setup          Start Session
+Suite Teardown      Finish Session
+
 
 *** Test Cases ***
-Deve abrir a tela inicial
+Deve Abrir A Tela Inicial
+    [Documentation]    Abrir o App e validar o texto da descrição na tela inicial
     [Tags]    mobiletest    home
-    Validar texto da descrição do app    Training Wheels Protocol
-    Validar texto da descrição do app    Mobile Version
+    Validar Texto Da Descrição Do App    Training Wheels Protocol
+    Validar Texto Da Descrição Do App    Mobile Version

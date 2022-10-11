@@ -1,34 +1,41 @@
 *** Settings ***
-Resource    ${CURDIR}\\..\\resources\\base.robot
+Resource            ${CURDIR}\\..\\resources\\base.resource
 
-Test Setup    Start Session
-Suite Teardown    Finish Session
+Test Setup          Start Session
+Suite Teardown      Finish Session
+
+Force Tags          mobiletest    nav
+
 
 *** Test Cases ***
 Deve acessar a tela AVENGERS
-    [Tags]    mobiletest    nav    avengers
-    Clicar em começar
-    Abrir o menu de navegação
-    Clicar na opção do menu    AVENGERS
-				Validar o texto da barra de ferramentas    AVENGERS
+    [Documentation]    Acessar a tela AVENGENS pelo menu de navegação e validar o texto da barra de ferramentes
+    [Tags]    avengers
+    Clicar Em Começar
+    Abrir O Menu De Navegação
+    Clicar Na Opção Do Menu    AVENGERS
+    Validar O Texto Da Barra De Ferramentas    AVENGERS
 
 Deve acessar a tela FORMS
-    [Tags]    mobiletest    nav    forms
-    Clicar em começar
-    Abrir o menu de navegação
-    Clicar na opção do menu    FORMS
-				Validar o texto da barra de ferramentas    FORMS
+    [Documentation]    Acessar a tela FORMS pelo menu de navegação e validar o texto da barra de ferramentes
+    [Tags]    forms
+    Clicar Em Começar
+    Abrir O Menu De Navegação
+    Clicar Na Opção Do Menu    FORMS
+    Validar O Texto Da Barra De Ferramentas    FORMS
 
 Deve acessar a tela DIALOGS
-    [Tags]    mobiletest    nav    dialogs
-    Clicar em começar
-    Abrir o menu de navegação
-    Clicar na opção do menu    DIALOGS
-				Validar o texto da barra de ferramentas    DIALOGS
+    [Documentation]    Acessar a tela DIALOGS pelo menu de navegação e validar o texto da barra de ferramentes
+    [Tags]    dialogs
+    Clicar Em Começar
+    Abrir O Menu De Navegação
+    Clicar Na Opção Do Menu    DIALOGS
+    Validar O Texto Da Barra De Ferramentas    DIALOGS
 
 Deve acessar a tela SEEK BAR
-    [Tags]    mobiletest    nav    seek_bar
-    Clicar em começar
-    Abrir o menu de navegação
-    Clicar na opção do menu    SEEK BAR
-				Validar o texto da barra de ferramentas    SEEK BAR
+    [Documentation]    Acessar a tela SEEK BAR pelo menu de navegação e validar o texto da barra de ferramentes
+    [Tags]    seek_bar
+    Clicar Em Começar
+    Abrir O Menu De Navegação
+    Clicar Na Opção Do Menu    SEEK BAR
+    Validar O Texto Da Barra De Ferramentas    SEEK BAR

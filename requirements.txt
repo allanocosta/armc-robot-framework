@@ -1,0 +1,6 @@
+robotframework>=5.0.1,<=5.0.2
+robotframework-browser>=14.0.0
+robotframework-appiumlibrary==1.6.3
+robotframework-requests==0.9.3
+robotframework-tidy==3.2
+PyYAML==6.0
