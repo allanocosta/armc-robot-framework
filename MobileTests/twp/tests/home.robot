@@ -3,8 +3,8 @@ Documentation       Suite de testes da home page
 
 Resource            ${CURDIR}\\..\\resources\\base.resource
 
-Suite Teardown      Finish Session
 Test Setup          Start Session
+Suite Teardown      Finish Session
 
 
 *** Test Cases ***

@@ -1,8 +1,8 @@
 *** Settings ***
 Resource            ${CURDIR}\\..\\resources\\base.resource
 
-Suite Teardown      Finish Session
 Test Setup          Start Session
+Suite Teardown      Finish Session
 
 Force Tags          mobiletest    nav
 

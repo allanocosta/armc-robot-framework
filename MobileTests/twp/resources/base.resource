@@ -4,7 +4,7 @@ Resource    actions/navBar.resource
 
 
 *** Variables ***
-${APPIUM_TIMEOUT}       5
+${APPIUM_TIMEOUT}       10
 ${PLATAFORM_NAME}       Android
 ${DEVICE_NAME}          Android Emulator
 ${APP}                  ${CURDIR}\\..\\app\\twp.apk
