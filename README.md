@@ -17,6 +17,7 @@ git clone https://armcosta-allanpocosta@bitbucket.org/armcosta/armc-robot-framew
 Execute o comando abaixo para executar todos os testes do projeto.
 #### Exemplo:
 ```tox -- .```
+
 *NOTA: Você pode utilizar o argumento ```-i <FEATURE_TAG>``` para executar apenas os testes com as tags específicas.
 
 #### Exemplo:
