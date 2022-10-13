@@ -15,17 +15,10 @@ git clone https://armcosta-allanpocosta@bitbucket.org/armcosta/armc-robot-framew
 
 ## Execução
 Execute o comando abaixo para executar todos os testes do projeto.
-#### Exemplo:
-```
-tox -- .```
-*NOTA: Você pode utilizar o argumento ```
--i <FEATURE_TAG>``` para executar apenas os testes com as tags específicas.
-### Exemplo:
-```
-tox -- -i mobiletest .```
-Para executar os testes Web sem o modo headless, adicione o argumento ```
--v HEADLESS:false``` na linha de comando.
-#### Exemplo:
-```
-tox -- -v HEADLESS:false .
-```
+#### Exemplo: ```tox -- .```
+*NOTA: Você pode utilizar o argumento ```-i <FEATURE_TAG>``` para executar apenas os testes com as tags específicas.
+
+### Exemplo: ```tox -- -i mobiletest .```
+Para executar os testes Web sem o modo headless, adicione o argumento ```-v HEADLESS:false``` na linha de comando.
+
+#### Exemplo: ```tox -- -v HEADLESS:false .```
