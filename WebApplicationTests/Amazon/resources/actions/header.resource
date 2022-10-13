@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation       Arquivo com as funcionalidades do header da página
 
-
 *** Variables ***
 ${SEARCH_BAR}       \#twotabsearchtextbox
 ${SEARCH_BUTTON}    \#nav-search-submit-button

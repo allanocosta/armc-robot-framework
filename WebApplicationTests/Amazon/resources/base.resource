@@ -9,7 +9,6 @@ Resource            actions/productPage.resource
 Resource            actions/cartPage.resource
 Resource            actions/searchResultsPage.resource
 
-
 *** Variables ***
 ${BROWSER}          chromium
 ${HEADLESS}         true

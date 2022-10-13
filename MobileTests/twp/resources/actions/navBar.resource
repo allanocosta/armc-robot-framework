@@ -1,6 +1,5 @@
 *** Variables ***
-${BTN_NAV_BAR}
-...    //android.widget.ImageButton[@content-desc="Open navigation drawer"]
+${BTN_NAV_BAR}    //android.widget.ImageButton[@content-desc="Open navigation drawer"]
 ${NAV_BAR}              io.qaninja.android.twp:id/navView
 ${TOOL_BAR_TITLE}       io.qaninja.android.twp:id/toolbarTitle
 

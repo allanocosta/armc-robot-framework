@@ -1,11 +1,10 @@
 *** Settings ***
 Resource            ${CURDIR}\\..\\resources\\base.resource
 
-Test Setup          Start Session
 Suite Teardown      Finish Session
+Test Setup          Start Session
 
-Force Tags          mobiletest    nav
-
+Force Tags          mobiletest   nav
 
 *** Test Cases ***
 Deve acessar a tela AVENGERS

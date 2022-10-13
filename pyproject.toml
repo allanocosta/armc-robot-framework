@@ -1,16 +1,21 @@
 [tool.robotidy]
 diff = true
-spacecount = 2
+spacecount = 3
 continuation-indent = 4
-line-length = 90
+line-length = 130
 transform = [
-   "DiscardEmptySections:allow_only_comments=True",
-   "SplitTooLongLine"
+	"AddMissingEnd",
+	"AlignSettingsSection",
+	"DiscardEmptySections",
+	"IndentNestedKeywords",
+	"OrderSettings",
+	"OrderSettingsSection"
 ]
+
 [tool.robocop]
 configure = [
-    "line-too-long:line_length:130"
+ "line-too-long:line_length:130"
 ]
 language = [
-    "pt"
+ "pt"
 ]

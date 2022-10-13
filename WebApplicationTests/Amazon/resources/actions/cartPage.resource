@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation       Arquivo com as funcionalidades do carrinho de compras
 
-
 *** Variables ***
 ${DIV_CART_BODY}        div#sc-active-cart
 ${SPAN_CART_TEXT}       span.a-truncate-cut

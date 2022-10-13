@@ -2,8 +2,7 @@
 Documentation       Documentação da API: https://fakerestapi.azurewebsites.net/index.html
 
 Library             Collections
-Library                 RequestsLibrary
-
+Library             RequestsLibrary
 
 *** Variables ***
 ${URL_API}              https://fakerestapi.azurewebsites.net

@@ -5,8 +5,7 @@ Resource            ${CURDIR}\\..\\resources\\base.resource
 
 Suite Setup         Connect To API
 
-Force Tags          servicetest    fakerestapi    activities
-
+Force Tags          servicetest   fakerestapi   activities
 
 *** Test Cases ***
 Search list for all Activities

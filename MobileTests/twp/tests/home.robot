@@ -3,9 +3,8 @@ Documentation       Suite de testes da home page
 
 Resource            ${CURDIR}\\..\\resources\\base.resource
 
-Test Setup          Start Session
 Suite Teardown      Finish Session
-
+Test Setup          Start Session
 
 *** Test Cases ***
 Deve Abrir A Tela Inicial
