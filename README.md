@@ -3,8 +3,7 @@ Projeto de testes de serviços, web e mobile com Robot Framework integrado ao To
 
 ## O que é o Tox?
 [Tox](https://tox.wiki/en/latest/#what-is-tox) é uma ferramenta genérica de linha de comando de teste e gerenciamento de ```
-virtualenv
-```
+virtualenv```
 
 ## Instalação
 Faça o download e instale o [Python](https://www.python.org/) com o [pip](https://pip.pypa.io) e o [NodeJS](https://nodejs.org/en/)
