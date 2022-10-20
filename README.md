@@ -16,8 +16,10 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 
 1. Instale o [Python][Python] com o [pip][pip]
 2. Instale o [NodeJS][NodeJS]
-3. Clone este projeto ```git clone https://armcosta-allanpocosta@bitbucket.org/armcosta/armc-robot-framework.git```
-4. Instale o [Tox][ToxInstall] ```pip install tox```
+3. Instale o [Appium Desktop][AppiumDesktop]
+4. Instale o [Android Studio][AndroidStudio]
+5. Clone este projeto ```git clone https://armcosta-allanpocosta@bitbucket.org/armcosta/armc-robot-framework.git```
+6. Instale o [Tox][ToxInstall] ```pip install tox```
 
 ### Exemplo de execução de todos os cenários do projeto
 
@@ -42,3 +44,5 @@ Para executar os testes Web sem o modo headless, adicione o argumento ```-v HEAD
 [pip]: https://pip.pypa.io
 [NodeJS]: https://nodejs.org/en/
 [ToxInstall]: https://tox.wiki/en/latest/install.html
+[AppiumDesktop]: https://appium.io/downloads.html
+[AndroidStudio]: https://developer.android.com/studio
