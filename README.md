@@ -25,17 +25,18 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 
 ```tox -- .```
 
+- No arquivo [tox.ini][tox.ini] estão configurados as variáveis para executar os testes de serviços, mobile e web. Caso queira executar um tipo específico de testes, estas variáveis devem ser informadas na execução dos testes. Ex.: ```tox -e servicetests -- .```
 - NOTA: Você pode utilizar o argumento ```-i <FEATURE_TAG>``` para executar apenas os testes com as tags específicas
 
 ### Exemplo de execução por TAG
 
-```tox -- -i mobiletest .```
+```tox -e mobiletests -- -i home .```
 
 Para executar os testes Web sem o modo headless, adicione o argumento ```-v HEADLESS:false``` na linha de comando.
 
-### Exemplo de execução dos testes Web com o modo HEADLESS desabilitado
+### Exemplo de execução dos testes web com o modo HEADLESS desabilitado
 
-```tox -- -v HEADLESS:false .```
+```tox -e webtests -- -v HEADLESS:false .```
 
 [WhatIsTox]: https://tox.wiki/en/latest/#what-is-tox
 [RobotidyIntroduction]: https://robotidy.readthedocs.io/en/stable/#introduction
@@ -46,3 +47,4 @@ Para executar os testes Web sem o modo headless, adicione o argumento ```-v HEAD
 [ToxInstall]: https://tox.wiki/en/latest/install.html
 [AppiumDesktop]: https://appium.io/downloads.html
 [AndroidStudio]: https://developer.android.com/studio
+[tox.ini]: https://github.com/allanocosta/armc-robot-framework/blob/develop/tox.ini

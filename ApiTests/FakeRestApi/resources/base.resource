@@ -22,7 +22,7 @@ ${URL_API}              https://fakerestapi.azurewebsites.net
 
 *** Keywords ***
 Connect To API
-    Create Session    fakeApi    ${URL_API}
+    Create Session    fakeApi    ${URL_API}    verify=False    disable_warnings=1
 
 Request All Activities
     ${RESPONSE_CODE}    GET On Session    fakeApi    /api/v1/Activities
