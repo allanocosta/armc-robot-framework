@@ -6,18 +6,18 @@ Library             RequestsLibrary
 
 *** Variables ***
 ${URL_API}              https://fakerestapi.azurewebsites.net
-&{ACTIVITY_8}           id=8
+&{ACTIVITY_8}           id=${8}
 ...                     title=Activity 8
-...                     completed=True
-&{NEW_ACTIVITY}         id=25
+...                     completed=${True}
+&{NEW_ACTIVITY}         id=${25}
 ...                     title=My New Activity
 ...                     dueDate=2022-07-08T13:41:57.436Z
-...                     completed=True
-...                     completed=True
-&{EDITED_ACTIVITY}      id=23
+...                     completed=${True}
+...                     completed=${True}
+&{EDITED_ACTIVITY}      id=${23}
 ...                     title=Edited Activity
 ...                     dueDate=2022-07-08T13:41:57.436Z
-...                     completed=True
+...                     completed=${True}
 
 
 *** Keywords ***
@@ -29,8 +29,8 @@ Request All Activities
     Log    ${RESPONSE_CODE.text}
     Set Test Variable    ${RESPONSE_CODE}
 
-Request The Activity "${activity_id}"
-    ${RESPONSE_CODE}    GET On Session    fakeApi    /api/v1/Activities/${activity_id}
+Request The Activity "${ACTIVITY_ID}"
+    ${RESPONSE_CODE}    GET On Session    fakeApi    /api/v1/Activities/${ACTIVITY_ID}
     Log    ${RESPONSE_CODE.text}
     Set Test Variable    ${RESPONSE_CODE}
 
@@ -44,18 +44,18 @@ Create A New Activity
     Log    ${RESPONSE_CODE.text}
     Set Test Variable    ${RESPONSE_CODE}
 
-Edit The Activity "${activity_id}"
+Edit The Activity "${ACTIVITY_ID}"
     ${headers}    Create Dictionary    Content-Type=application/json v=1.0
     ${RESPONSE_CODE}  PUT On Session
     ...    fakeApi
-    ...    /api/v1/Activities/${activity_id}
+    ...    /api/v1/Activities/${ACTIVITY_ID}
     ...    data={"id": 23, "title": "Edited Activity", "dueDate": "2030-07-08T20:31:47.575Z", "completed": true}
     ...    headers=${headers}
     Log    ${RESPONSE_CODE.text}
     Set Test Variable    ${RESPONSE_CODE}
 
-Delete The Activity "${activity_id}"
-    ${RESPONSE_CODE}    DELETE On Session    fakeApi    /api/v1/Activities/${activity_id}
+Delete The Activity "${ACTIVITY_ID}"
+    ${RESPONSE_CODE}    DELETE On Session    fakeApi    /api/v1/Activities/${ACTIVITY_ID}
     Log    ${RESPONSE_CODE.text}
     Set Test Variable    ${RESPONSE_CODE}
 

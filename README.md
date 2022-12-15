@@ -14,19 +14,21 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 
 ## Instalação
 
-1. Instale o [Python][Python] com o [pip][pip]
-2. Instale o [NodeJS][NodeJS]
-3. Instale o [Appium Desktop][AppiumDesktop]
-4. Instale o [Android Studio][AndroidStudio]
-5. Clone este projeto ```git clone https://github.com/allanocosta/armc-robot-framework.git```
-6. Instale o [Tox][ToxInstall] ```pip install tox```
+1. Instale o [Python][Python] com o [pip][pip].
+2. Instale o [NodeJS][NodeJS].
+3. Instale o [Appium Desktop][AppiumDesktop].
+4. Instale o [Android Studio][AndroidStudio].
+5. Clone este projeto ```git clone https://github.com/allanocosta/armc-robot-framework.git```.
+6. Instale o [Tox][ToxInstall] ```pip install tox```.
+
+- Tenha o Java JDK8 ou superior instalado e configurado para utilizar o Appium Desktop.
 
 ### Exemplo de execução de todos os cenários do projeto
 
-```tox -- .```
+```tox -- -i servicetest -i mobiletest -i webtest .```
 
-- No arquivo [tox.ini][tox.ini] estão configurados as variáveis para executar os testes de serviços, mobile e web. Caso queira executar um tipo específico de testes, estas variáveis devem ser informadas na execução dos testes. Ex.: ```tox -e servicetests -- .```
-- NOTA: Você pode utilizar o argumento ```-i <FEATURE_TAG>``` para executar apenas os testes com as tags específicas
+- No arquivo [tox.ini][tox.ini] estão configurados as variáveis para executar os testes de serviços, mobile e web. Caso queira executar um tipo específico de testes, estas variáveis devem ser informadas na execução dos testes. Ex.: ```tox -e servicetests -- .```.
+- NOTA: Você pode utilizar o argumento ```-i <FEATURE_TAG>``` para executar apenas os testes com as tags específicas.
 
 ### Exemplo de execução por TAG
 

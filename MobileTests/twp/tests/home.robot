@@ -6,9 +6,11 @@ Resource            ${CURDIR}\\..\\resources\\base.resource
 Suite Teardown      Finish Session
 Test Setup          Start Session
 
+Force Tags          mobiletest
+
 *** Test Cases ***
 Deve Abrir A Tela Inicial
     [Documentation]    Abrir o App e validar o texto da descrição na tela inicial
-    [Tags]    mobiletest    home
+    [Tags]    home
     Validar Texto Da Descrição Do App    Training Wheels Protocol
     Validar Texto Da Descrição Do App    Mobile Version
