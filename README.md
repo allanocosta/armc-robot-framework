@@ -18,7 +18,7 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 2. Instale o [NodeJS][NodeJS]
 3. Instale o [Appium Desktop][AppiumDesktop]
 4. Instale o [Android Studio][AndroidStudio]
-5. Clone este projeto ```git clone https://armcosta-allanpocosta@bitbucket.org/armcosta/armc-robot-framework.git```
+5. Clone este projeto ```git clone https://github.com/allanocosta/armc-robot-framework.git```
 6. Instale o [Tox][ToxInstall] ```pip install tox```
 
 ### Exemplo de execução de todos os cenários do projeto
