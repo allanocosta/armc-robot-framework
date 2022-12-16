@@ -10,7 +10,7 @@ Force Tags          mobiletest   nav
 Deve acessar a tela AVENGERS
     [Documentation]    Acessar a tela AVENGENS pelo menu de navegação e validar o texto da barra de ferramentes
     [Tags]    avengers
-    Clicar Em Começar
+				Clicar Em Começar
     Abrir O Menu De Navegação
     Clicar Na Opção Do Menu    AVENGERS
     Validar O Texto Da Barra De Ferramentas    AVENGERS
@@ -18,7 +18,7 @@ Deve acessar a tela AVENGERS
 Deve acessar a tela FORMS
     [Documentation]    Acessar a tela FORMS pelo menu de navegação e validar o texto da barra de ferramentes
     [Tags]    forms
-    Clicar Em Começar
+				Clicar Em Começar
     Abrir O Menu De Navegação
     Clicar Na Opção Do Menu    FORMS
     Validar O Texto Da Barra De Ferramentas    FORMS
@@ -26,7 +26,7 @@ Deve acessar a tela FORMS
 Deve acessar a tela DIALOGS
     [Documentation]    Acessar a tela DIALOGS pelo menu de navegação e validar o texto da barra de ferramentes
     [Tags]    dialogs
-    Clicar Em Começar
+				Clicar Em Começar
     Abrir O Menu De Navegação
     Clicar Na Opção Do Menu    DIALOGS
     Validar O Texto Da Barra De Ferramentas    DIALOGS
@@ -34,7 +34,7 @@ Deve acessar a tela DIALOGS
 Deve acessar a tela SEEK BAR
     [Documentation]    Acessar a tela SEEK BAR pelo menu de navegação e validar o texto da barra de ferramentes
     [Tags]    seek_bar
-    Clicar Em Começar
+				Clicar Em Começar
     Abrir O Menu De Navegação
     Clicar Na Opção Do Menu    SEEK BAR
     Validar O Texto Da Barra De Ferramentas    SEEK BAR

@@ -1,6 +1,7 @@
 *** Settings ***
 Library     AppiumLibrary
 Resource    actions/navBar.resource
+Resource    actions/formsPage.resource
 
 *** Variables ***
 ${APPIUM_TIMEOUT}       20
