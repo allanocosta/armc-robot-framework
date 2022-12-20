@@ -2,5 +2,6 @@ robotframework>=6.0.0,<=6.0.1
 robotframework-browser>=14.3.0
 robotframework-appiumlibrary==2.0.0
 robotframework-requests==0.9.4
-robotframework-tidy>=3.3
+robotframework-tidy>=3.3.0
+robotframework-robocop>=2.4.0
 PyYAML==6.0
