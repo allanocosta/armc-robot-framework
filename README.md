@@ -28,17 +28,18 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 ```tox -- -i servicetest -i mobiletest -i webtest .```
 
 - No arquivo [tox.ini][tox.ini] estão configurados as variáveis para executar os testes de serviços, mobile e web. Caso queira executar um tipo específico de testes, estas variáveis devem ser informadas na execução dos testes. Ex.: ```tox -e servicetests -- .```.
+- Inicialmente, as variáveis ```tidy``` e ```lint``` deven ser passadas nos argumentos de execução.
 - NOTA: Você pode utilizar o argumento ```-i <FEATURE_TAG>``` para executar apenas os testes com as tags específicas.
 
 ### Exemplo de execução por TAG
 
-```tox -e mobiletests -- -i home .```
+```tox -e tidy,lint,mobiletests -- -i home .```
 
 Para executar os testes Web sem o modo headless, adicione o argumento ```-v HEADLESS:false``` na linha de comando.
 
 ### Exemplo de execução dos testes web com o modo HEADLESS desabilitado
 
-```tox -e webtests -- -v HEADLESS:false .```
+```tox -e tidy,lint,webtests -- -v HEADLESS:false .```
 
 [WhatIsTox]: https://tox.wiki/en/latest/#what-is-tox
 [RobotidyIntroduction]: https://robotidy.readthedocs.io/en/stable/#introduction
