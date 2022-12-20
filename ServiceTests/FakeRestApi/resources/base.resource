@@ -4,6 +4,7 @@ Documentation       Documentação da API: https://fakerestapi.azurewebsites.net
 Library             Collections
 Library             RequestsLibrary
 
+
 *** Variables ***
 ${URL_API}              https://fakerestapi.azurewebsites.net
 &{ACTIVITY_8}           id=${8}
@@ -22,91 +23,91 @@ ${URL_API}              https://fakerestapi.azurewebsites.net
 
 *** Keywords ***
 Connect To API
-    Create Session    fakeApi    ${URL_API}    verify=False    disable_warnings=1
+  Create Session          fakeApi                 ${URL_API}              verify=False            disable_warnings=1
 
 Request All Activities
-    ${RESPONSE_CODE}    GET On Session    fakeApi    /api/v1/Activities
-    Log    ${RESPONSE_CODE.text}
-    Set Test Variable    ${RESPONSE_CODE}
+  ${RESPONSE_CODE}        GET On Session          fakeApi                 /api/v1/Activities
+  Log                     ${RESPONSE_CODE.text}
+  Set Test Variable       ${RESPONSE_CODE}
 
 Request The Activity "${ACTIVITY_ID}"
-    ${RESPONSE_CODE}    GET On Session    fakeApi    /api/v1/Activities/${ACTIVITY_ID}
-    Log    ${RESPONSE_CODE.text}
-    Set Test Variable    ${RESPONSE_CODE}
+  ${RESPONSE_CODE}        GET On Session          fakeApi                 /api/v1/Activities/${ACTIVITY_ID}
+  Log                     ${RESPONSE_CODE.text}
+  Set Test Variable       ${RESPONSE_CODE}
 
 Create A New Activity
-    ${headers}    Create Dictionary    Content-Type=application/json v=1.0
-    ${RESPONSE_CODE}  POST On Session
-    ...    fakeapi
-    ...    /api/v1/Activities
-    ...    data={"id": 25, "title": "My New Activity", "dueDate": "2022-07-08T13:41:57.436Z", "completed": true}
-    ...    headers=${headers}
-    Log    ${RESPONSE_CODE.text}
-    Set Test Variable    ${RESPONSE_CODE}
+  ${headers}              Create Dictionary       Content-Type=application/json v=1.0
+  ${RESPONSE_CODE}        POST On Session
+  ...                     fakeapi
+  ...                     /api/v1/Activities
+  ...                     data={"id": 25, "title": "My New Activity", "dueDate": "2022-07-08T13:41:57.436Z", "completed": true}
+  ...                     headers=${headers}
+  Log                     ${RESPONSE_CODE.text}
+  Set Test Variable       ${RESPONSE_CODE}
 
 Edit The Activity "${ACTIVITY_ID}"
-    ${headers}    Create Dictionary    Content-Type=application/json v=1.0
-    ${RESPONSE_CODE}  PUT On Session
-    ...    fakeApi
-    ...    /api/v1/Activities/${ACTIVITY_ID}
-    ...    data={"id": 23, "title": "Edited Activity", "dueDate": "2030-07-08T20:31:47.575Z", "completed": true}
-    ...    headers=${headers}
-    Log    ${RESPONSE_CODE.text}
-    Set Test Variable    ${RESPONSE_CODE}
+  ${headers}              Create Dictionary       Content-Type=application/json v=1.0
+  ${RESPONSE_CODE}        PUT On Session
+  ...                     fakeApi
+  ...                     /api/v1/Activities/${ACTIVITY_ID}
+  ...                     data={"id": 23, "title": "Edited Activity", "dueDate": "2030-07-08T20:31:47.575Z", "completed": true}
+  ...                     headers=${headers}
+  Log                     ${RESPONSE_CODE.text}
+  Set Test Variable       ${RESPONSE_CODE}
 
 Delete The Activity "${ACTIVITY_ID}"
-    ${RESPONSE_CODE}    DELETE On Session    fakeApi    /api/v1/Activities/${ACTIVITY_ID}
-    Log    ${RESPONSE_CODE.text}
-    Set Test Variable    ${RESPONSE_CODE}
+  ${RESPONSE_CODE}        DELETE On Session       fakeApi                 /api/v1/Activities/${ACTIVITY_ID}
+  Log                     ${RESPONSE_CODE.text}
+  Set Test Variable       ${RESPONSE_CODE}
 
 Status Code Should Be
-    [Arguments]    ${STATUS_CODE}
-    Status Should Be    ${STATUS_CODE}
+  [Arguments]             ${STATUS_CODE}
+  Status Should Be        ${STATUS_CODE}
 
 Response Code Shoul Be "${qty_items}" Items
-    Length Should Be    ${RESPONSE_CODE.json()}    ${qty_items}
+  Length Should Be        ${RESPONSE_CODE.json()}                         ${qty_items}
 
 Check If The Response The Activity 8 Is Correct
-    Dictionary Should Contain Item    ${RESPONSE_CODE.json()}    id    ${ACTIVITY_8.id}
-    Dictionary Should Contain Item
-    ...    ${RESPONSE_CODE.json()}
-    ...    title
-    ...    ${ACTIVITY_8.title}
-    Should Not Be Empty    ${RESPONSE_CODE.json()["dueDate"]}
-    Dictionary Should Contain Item
-    ...    ${RESPONSE_CODE.json()}
-    ...    completed
-    ...    ${ACTIVITY_8.completed}
+  Dictionary Should Contain Item                  ${RESPONSE_CODE.json()}                         id                      ${ACTIVITY_8.id}
+  Dictionary Should Contain Item
+  ...                     ${RESPONSE_CODE.json()}
+  ...                     title
+  ...                     ${ACTIVITY_8.title}
+  Should Not Be Empty     ${RESPONSE_CODE.json()["dueDate"]}
+  Dictionary Should Contain Item
+  ...                     ${RESPONSE_CODE.json()}
+  ...                     completed
+  ...                     ${ACTIVITY_8.completed}
 
 Check If The Response The New Activity Is Correct
-    Dictionary Should Contain Item    ${RESPONSE_CODE.json()}    id    ${NEW_ACTIVITY.id}
-    Dictionary Should Contain Item
-    ...    ${RESPONSE_CODE.json()}
-    ...    title
-    ...    ${NEW_ACTIVITY.title}
-    Dictionary Should Contain Item
-    ...    ${RESPONSE_CODE.json()}
-    ...    dueDate
-    ...    ${NEW_ACTIVITY.dueDate}
-    Dictionary Should Contain Item
-    ...    ${RESPONSE_CODE.json()}
-    ...    completed
-    ...    ${NEW_ACTIVITY.completed}
+  Dictionary Should Contain Item                  ${RESPONSE_CODE.json()}                         id                      ${NEW_ACTIVITY.id}
+  Dictionary Should Contain Item
+  ...                     ${RESPONSE_CODE.json()}
+  ...                     title
+  ...                     ${NEW_ACTIVITY.title}
+  Dictionary Should Contain Item
+  ...                     ${RESPONSE_CODE.json()}
+  ...                     dueDate
+  ...                     ${NEW_ACTIVITY.dueDate}
+  Dictionary Should Contain Item
+  ...                     ${RESPONSE_CODE.json()}
+  ...                     completed
+  ...                     ${NEW_ACTIVITY.completed}
 
 Check If The Response The Edited Activity Is Correct
-    Dictionary Should Contain Item
-    ...    ${RESPONSE_CODE.json()}
-    ...    id
-    ...    ${EDITED_ACTIVITY.id}
-    Dictionary Should Contain Item
-    ...    ${RESPONSE_CODE.json()}
-    ...    title
-    ...    ${EDITED_ACTIVITY.title}
-    Should Not Be Empty    ${RESPONSE_CODE.json()["dueDate"]}
-    Dictionary Should Contain Item
-    ...    ${RESPONSE_CODE.json()}
-    ...    completed
-    ...    ${EDITED_ACTIVITY.completed}
+  Dictionary Should Contain Item
+  ...                     ${RESPONSE_CODE.json()}
+  ...                     id
+  ...                     ${EDITED_ACTIVITY.id}
+  Dictionary Should Contain Item
+  ...                     ${RESPONSE_CODE.json()}
+  ...                     title
+  ...                     ${EDITED_ACTIVITY.title}
+  Should Not Be Empty     ${RESPONSE_CODE.json()["dueDate"]}
+  Dictionary Should Contain Item
+  ...                     ${RESPONSE_CODE.json()}
+  ...                     completed
+  ...                     ${EDITED_ACTIVITY.completed}
 
 Check If Activity Is Deleted
-    Should Be Empty    ${RESPONSE_CODE.content}
+  Should Be Empty         ${RESPONSE_CODE.content}
