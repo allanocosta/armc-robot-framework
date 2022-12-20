@@ -25,20 +25,39 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 
 ### Exemplo de execução de todos os cenários do projeto
 
-```tox -- -i servicetest -i mobiletest -i webtest .```
+```shell
+tox run-parallel -p 3 -- .
+```
 
-- No arquivo [tox.ini][tox.ini] estão configurados as variáveis para executar os testes de serviços, mobile e web. Caso queira executar um tipo específico de testes, estas variáveis devem ser informadas na execução dos testes. Ex.: ```tox -e servicetests -- .```.
-- NOTA: Você pode utilizar o argumento ```-i <FEATURE_TAG>``` para executar apenas os testes com as tags específicas.
+- NOTA: Caso não queira executar os testes em paralelo, remova o argumento ```run-parallel``` na execução.
+
+### Exemplo de execução sem paralelismo de todos os cenários de testes
+
+```shell
+tox -- .
+```
+
+- No arquivo [tox.ini][tox.ini] estão configurados as variáveis para executar os testes de serviços, mobile e web. Caso queira executar um tipo específico de testes, estas variáveis devem ser informadas na execução dos testes. Ex.:
+
+```shell
+tox run-parallel -p 3 -e servicetests -- .
+```
+
+- NOTA: Você pode utilizar o argumento ```-i <FEATURE_TAG>``` para executar apenas os testes com as tags específicas. Lembre-se de passar as variáveis do tox que contém as TAGs no argumento de execução.
 
 ### Exemplo de execução por TAG
 
-```tox -e mobiletests -- -i home .```
+```shell
+tox run-parallel -p 3 -e mobiletests -- -i home .
+```
 
-Para executar os testes Web sem o modo headless, adicione o argumento ```-v HEADLESS:false``` na linha de comando.
+Para executar os testes Web sem o modo headless, adicione o argumento ```-v HEADLESS:False``` na linha de comando.
 
 ### Exemplo de execução dos testes web com o modo HEADLESS desabilitado
 
-```tox -e webtests -- -v HEADLESS:false .```
+```shell
+tox run-parallel -p 3 -e webtests -- -v HEADLESS:False .
+```
 
 [WhatIsTox]: https://tox.wiki/en/latest/#what-is-tox
 [RobotidyIntroduction]: https://robotidy.readthedocs.io/en/stable/#introduction
