@@ -25,7 +25,7 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 
 ### Exemplo de execução de todos os cenários do projeto
 
-```shell
+```bash
 tox run-parallel -p 3 -- .
 ```
 
