@@ -21,7 +21,8 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 5. Clone este projeto ```git clone https://github.com/allanocosta/armc-robot-framework.git```.
 6. Instale o [Tox][ToxInstall] ```pip install tox```.
 
-- Tenha o Java JDK8 ou superior instalado e configurado para utilizar o Appium Desktop.
+- Tenha o Java JDK11 ou superior instalado e configurado para utilizar o Appium Desktop e o Android Studio.
+- Configure a variável `$ANDROID_HOME` do Android Studio e adicione os diretórios `$ANDROID_HOME\platform-tools`, `$ANDROID_HOME\tools`, `$ANDROID_HOME\tools\bin`, `$ANDROID_HOME\tools\lib` no path do seu sistema.
 
 ### Exemplo de execução de todos os cenários do projeto
 
@@ -33,13 +34,13 @@ tox run-parallel -p 3 -- .
 
 ### Exemplo de execução sem paralelismo de todos os cenários de testes
 
-```shell
+```bash
 tox -- .
 ```
 
 - No arquivo [tox.ini][tox.ini] estão configurados as variáveis para executar os testes de serviços, mobile e web. Caso queira executar um tipo específico de testes, estas variáveis devem ser informadas na execução dos testes. Ex.:
 
-```shell
+```bash
 tox run-parallel -p 3 -e servicetests -- .
 ```
 
@@ -47,7 +48,7 @@ tox run-parallel -p 3 -e servicetests -- .
 
 ### Exemplo de execução por TAG
 
-```shell
+```bash
 tox run-parallel -p 3 -e mobiletests -- -i home .
 ```
 
@@ -55,7 +56,7 @@ Para executar os testes Web sem o modo headless, adicione o argumento ```-v HEAD
 
 ### Exemplo de execução dos testes web com o modo HEADLESS desabilitado
 
-```shell
+```bash
 tox run-parallel -p 3 -e webtests -- -v HEADLESS:False .
 ```
 
