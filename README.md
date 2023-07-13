@@ -15,11 +15,10 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 ## Instalação
 
 1. Instale o [Python][Python] com o [pip][pip].
-2. Instale o [NodeJS][NodeJS].
-3. Instale o [Appium Desktop][AppiumDesktop].
-4. Instale o [Android Studio][AndroidStudio].
-5. Clone este projeto ```git clone https://github.com/allanocosta/armc-robot-framework.git```.
-6. Instale o [Tox][ToxInstall] ```pip install tox```.
+2. Instale o [Appium Desktop][AppiumDesktop].
+3. Instale o [Android Studio][AndroidStudio].
+4. Clone este projeto ```git clone https://github.com/allanocosta/armc-robot-framework.git```.
+5. Instale o [Tox][ToxInstall] ```pip install tox```.
 
 - Tenha o Java JDK11 ou superior instalado e configurado para utilizar o Appium Desktop e o Android Studio.
 - Configure a variável `$ANDROID_HOME` do Android Studio e adicione os diretórios `$ANDROID_HOME\platform-tools`, `$ANDROID_HOME\tools`, `$ANDROID_HOME\tools\bin`, `$ANDROID_HOME\tools\lib` no path do seu sistema.
@@ -65,8 +64,7 @@ tox run-parallel -p 3 -e webtests -- -v HEADLESS:False .
 [RobotidyRobotFramework]: https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#tidy
 [Python]: https://www.python.org/
 [pip]: https://pip.pypa.io
-[NodeJS]: https://nodejs.org/en/
-[ToxInstall]: https://tox.wiki/en/latest/install.html
+[ToxInstall]: https://tox.wiki/en/latest/installation.html
 [AppiumDesktop]: https://appium.io/downloads.html
 [AndroidStudio]: https://developer.android.com/studio
 [tox.ini]: https://github.com/allanocosta/armc-robot-framework/blob/develop/tox.ini
