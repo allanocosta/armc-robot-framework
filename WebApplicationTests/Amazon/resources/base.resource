@@ -2,7 +2,6 @@
 Documentation       Arquivo base do projeto
 
 Library             Browser
-#Actions Resources
 Resource            actions/header.resource
 Resource            actions/menuPage.resource
 Resource            actions/productPage.resource
