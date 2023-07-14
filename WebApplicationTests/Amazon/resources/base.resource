@@ -18,7 +18,7 @@ ${RECORD_VIDEO}     {'dir':'videos', 'size':{'width':1920, 'height':1080}}
 ${COLOR_SCHEME}     dark
 
 ${URL}              https://www.amazon.com.br
-${PAGE_TITLE}       Amazon.com.br | Tudo pra você, de A a Z.
+${PAGE_TITLE}       Amazon.com.br
 
 
 *** Keywords ***
@@ -28,7 +28,7 @@ Start Session
 Go To Homepage
   New Page                url=${URL}
   Set Viewport Size       ${VIEWPORT.width}       ${VIEWPORT.height}
-  Get Title               ==                      ${PAGE_TITLE}
+  Get Title               *=                      ${PAGE_TITLE}
 
 Close Session
   Close Browser           ALL

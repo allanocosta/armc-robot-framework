@@ -19,36 +19,36 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 3. Instale o [Android Studio][AndroidStudio].
 4. Clone este projeto ```git clone https://github.com/allanocosta/armc-robot-framework.git```.
 5. Instale o [Tox][ToxInstall] ```pip install tox```.
+6. Execute o comando ```rfbrowser init``` para instalar as dependencias do robotframework-browser.
 
 - Tenha o Java JDK11 ou superior instalado e configurado para utilizar o Appium Desktop e o Android Studio.
 - Configure a variável `$ANDROID_HOME` do Android Studio e adicione os diretórios `$ANDROID_HOME\platform-tools`, `$ANDROID_HOME\tools`, `$ANDROID_HOME\tools\bin`, `$ANDROID_HOME\tools\lib` no path do seu sistema.
 
-### Exemplo de execução de todos os cenários do projeto
+No arquivo tox.ini estão configurados as variáveis locais para executar os testes de serviços, mobile e web. Elas estão identificadas com o `-local` no final.
+As variáveis que não tem o `-local` no final, são utilizadas para execução na pipeline de testes.
+
+### Exemplo de execução do testes
 
 ```bash
-tox run-parallel -p 3 -- .
+tox run-parallel -p 3 -e servicetests-local -- .
+```
+
+```bash
+tox run-parallel -p 3 -e mobiletests-local -- .
+```
+
+```bash
+tox run-parallel -p 3 -e webtests-local -- .
 ```
 
 - NOTA: Caso não queira executar os testes em paralelo, remova o argumento ```run-parallel``` na execução.
 
-### Exemplo de execução sem paralelismo de todos os cenários de testes
-
-```bash
-tox -- .
-```
-
-- No arquivo [tox.ini][tox.ini] estão configurados as variáveis para executar os testes de serviços, mobile e web. Caso queira executar um tipo específico de testes, estas variáveis devem ser informadas na execução dos testes. Ex.:
-
-```bash
-tox run-parallel -p 3 -e servicetests -- .
-```
-
-- NOTA: Você pode utilizar o argumento ```-i <FEATURE_TAG>``` para executar apenas os testes com as tags específicas. Lembre-se de passar as variáveis do tox que contém as TAGs no argumento de execução.
+Você pode utilizar o argumento ```-i <FEATURE_TAG>``` para executar apenas os testes com as tags específicas. Lembre-se de passar as variáveis do tox que contém as TAGs no argumento de execução.
 
 ### Exemplo de execução por TAG
 
 ```bash
-tox run-parallel -p 3 -e mobiletests -- -i home .
+tox run-parallel -p 3 -e mobiletests-local -- -i home .
 ```
 
 Para executar os testes Web sem o modo headless, adicione o argumento ```-v HEADLESS:False``` na linha de comando.
@@ -67,4 +67,3 @@ tox run-parallel -p 3 -e webtests -- -v HEADLESS:False .
 [ToxInstall]: https://tox.wiki/en/latest/installation.html
 [AppiumDesktop]: https://appium.io/downloads.html
 [AndroidStudio]: https://developer.android.com/studio
-[tox.ini]: https://github.com/allanocosta/armc-robot-framework/blob/develop/tox.ini
