@@ -27,7 +27,7 @@ CT 02 - Search a Product
 
   Search By               Pilha Recarregável
   Click Search Button
-  Text Should Be Displayed In The Results Page    RESULTADOS
+  Text Should Be Displayed In The Results Page    Resultados
   Text Should Be Displayed In The Search Result   Pilha Recarregável AAA Palito DURACELL Com 4 Unidades
 
 CT 03 - Add Product to Cart
@@ -36,7 +36,7 @@ CT 03 - Add Product to Cart
 
   Search By               Pilha Recarregável
   Click Search Button
-  Text Should Be Displayed In The Results Page    RESULTADOS
+  Text Should Be Displayed In The Results Page    Resultados
   Text Should Be Displayed In The Search Result   Pilha Recarregável AAA Palito DURACELL Com 4 Unidades
   Go To Product Page      Pilha Recarregável AAA Palito DURACELL Com 4 Unidades
   Add To Cart             Pilha Recarregável AAA Palito DURACELL Com 4 Unidades
@@ -49,7 +49,7 @@ CT 04 - Remove Product to Cart
 
   Search By               Pilha Recarregável
   Click Search Button
-  Text Should Be Displayed In The Results Page    RESULTADOS
+  Text Should Be Displayed In The Results Page    Resultados
   Text Should Be Displayed In The Search Result   Pilha Recarregável AAA Palito DURACELL Com 4 Unidades
   Go To Product Page      Pilha Recarregável AAA Palito DURACELL Com 4 Unidades
   Add To Cart             Pilha Recarregável AAA Palito DURACELL Com 4 Unidades

@@ -3,7 +3,7 @@ Documentation       Arquivo com as funcionalidades da página de resultado de pe
 
 
 *** Variables ***
-${SPAN_TITLE}       \div[data-cel-widget='search_result_2'] span span
+${SPAN_TITLE}       div.s-no-outline > span
 ${SPAN_RESULT}      div.s-search-results > div > div > div > div > div > div > div > h2 > a
 
 
