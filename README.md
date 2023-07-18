@@ -15,11 +15,12 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 ## Instalação
 
 1. Instale o [Python][Python] com o [pip][pip].
-2. Instale o [Appium Desktop][AppiumDesktop].
-3. Instale o [Android Studio][AndroidStudio].
-4. Clone este projeto ```git clone https://github.com/allanocosta/armc-robot-framework.git```.
-5. Instale o [Tox][ToxInstall] ```pip install tox```.
-6. Execute o comando ```rfbrowser init``` para instalar as dependencias do robotframework-browser.
+2. Instale o [Android Studio][AndroidStudio].
+3. Clone este projeto ```git clone https://github.com/allanocosta/armc-robot-framework.git```.
+4. Instale o [Tox][ToxInstall] ```pip install tox```.
+5. Execute o comando ```rfbrowser init``` para instalar as dependencias do robotframework-browser.
+6. Instale o [NodeJS][NodeJS] para utilizar a GUI do Appium.
+7. Instale o [Appium Desktop][AppiumDesktop].
 
 - Tenha o Java JDK11 ou superior instalado e configurado para utilizar o Appium Desktop e o Android Studio.
 - Configure a variável `$ANDROID_HOME` do Android Studio e adicione os diretórios `$ANDROID_HOME\platform-tools`, `$ANDROID_HOME\tools`, `$ANDROID_HOME\tools\bin`, `$ANDROID_HOME\tools\lib` no path do seu sistema.
@@ -67,3 +68,4 @@ tox run-parallel -p 3 -e webtests -- -v HEADLESS:False .
 [ToxInstall]: https://tox.wiki/en/latest/installation.html
 [AppiumDesktop]: https://appium.io/downloads.html
 [AndroidStudio]: https://developer.android.com/studio
+[NodeJS]: https://nodejs.org/en/
