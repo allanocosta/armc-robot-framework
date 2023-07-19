@@ -12,21 +12,25 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 
 É descendente do pacote [robot.tidy][RobotidyRobotFramework] interno do Robot Framework.
 
-## Instalação
+## Instalação no Windows
 
 1. Instale o [Python][Python] com o [pip][pip].
 2. Instale o [Android Studio][AndroidStudio].
-3. Clone este projeto ```git clone https://github.com/allanocosta/armc-robot-framework.git```.
+3. Clone este projeto.
 4. Instale o [Tox][ToxInstall] ```pip install tox```.
 5. Execute o comando ```rfbrowser init``` para instalar as dependencias do robotframework-browser.
-6. Instale o [NodeJS][NodeJS] para utilizar a GUI do Appium.
-7. Instale o [Appium Desktop][AppiumDesktop].
+6. Instale o [NodeJS][NodeJS] para utilizar o Appium.
+7. Instale o [Appium 2.0][Appium2.0] ```npm install appium-installer -g```.
+8. Instale o Appium Server e o driver uiautomator2 para execução dos testes mobile usando o ```appium-installer```
 
 - Tenha o Java JDK11 ou superior instalado e configurado para utilizar o Appium Desktop e o Android Studio.
-- Configure a variável `$ANDROID_HOME` do Android Studio e adicione os diretórios `$ANDROID_HOME\platform-tools`, `$ANDROID_HOME\tools`, `$ANDROID_HOME\tools\bin`, `$ANDROID_HOME\tools\lib` no path do seu sistema.
+
+- Configure a variável `%ANDROID_HOME%` do Android Studio em `%userprofile%\AppData\local\Android\Sdk` e adicione os diretórios `%ANDROID_HOME%\platform-tools`, `%ANDROID_HOME%\tools`, `%ANDROID_HOME%\tools\bin`, `%ANDROID_HOME\tools\lib` no path do seu sistema.
+
+- Use o comando `appium` para iniciar o Appium Server.
 
 No arquivo tox.ini estão configurados as variáveis locais para executar os testes de serviços, mobile e web. Elas estão identificadas com o `-local` no final.
-As variáveis que não tem o `-local` no final, são utilizadas para execução na pipeline de testes.
+
 
 ### Exemplo de execução do testes
 
@@ -66,6 +70,6 @@ tox run-parallel -p 3 -e webtests -- -v HEADLESS:False .
 [Python]: https://www.python.org/
 [pip]: https://pip.pypa.io
 [ToxInstall]: https://tox.wiki/en/latest/installation.html
-[AppiumDesktop]: https://appium.io/downloads.html
+[Appium2.0]: https://appium.io/
 [AndroidStudio]: https://developer.android.com/studio
 [NodeJS]: https://nodejs.org/en/
