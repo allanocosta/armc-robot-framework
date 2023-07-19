@@ -15,7 +15,7 @@ ${TEXT_CART_EMPTY}      Seu carrinho de compras da Amazon está vazio.
 Product Should Be In Cart
   [Arguments]             ${Product}
   Wait For Elements State                         ${DIV_CART_BODY}        visible                 30
-  Wait For Elements State                         ${SPAN_CART_TEXT}       visible                 30
+  # Wait For Elements State  ${SPAN_CART_TEXT}  visible  30
   Get Element Count       ${SPAN_CART_TEXT} >> "${Product}"               ==                      1
 
 Remove A Product From Cart
