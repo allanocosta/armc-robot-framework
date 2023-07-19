@@ -43,6 +43,7 @@ results/**/*
 .logs_*
 /log
 /logs
+/logs_*
 /.log
 /.logs
 /.log_*
