@@ -21,7 +21,6 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
-    pip install tox
     pip install -r web_requirements.txt
     rfbrowser init
   displayName: 'Install dependencies'
