@@ -25,5 +25,4 @@ jobs:
                 pip install -U -r web_requirements.txt
                 rfbrowser init
             - name: Run RF Web Tests
-              run: robot -d ./logs_web \
-                    -e servicetest -e mobiletest .
+              run: robot -d ./logs_web -e servicetest -e mobiletest .
