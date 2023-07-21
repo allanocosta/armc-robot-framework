@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Suite de testes para o site Amazon.com.br
 
-Resource            ${CURDIR}\..\resources\base.resource
+Resource            ${CURDIR}/../resources/base.resource
 
 Suite Setup         Start Session
 Suite Teardown      Close Session
