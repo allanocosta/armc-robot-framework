@@ -74,6 +74,9 @@ Thumbs.db
 *.wmv
 
 # Excluded directories
-.*/
+.tox/
+.env/
+.tmp/
+.temp/
 backup/**/*
 backup
