@@ -24,6 +24,7 @@ ${PAGE_TITLE}       Amazon.com.br
 *** Keywords ***
 Start Session
   New Browser             browser=${BROWSER}      headless=${HEADLESS}    timeout=01:00
+  Set Browser Timeout     30
 
 Go To Homepage
   New Page                url=${URL}
