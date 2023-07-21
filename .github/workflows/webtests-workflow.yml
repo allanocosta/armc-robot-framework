@@ -4,11 +4,11 @@ on: [push]
 
 jobs:
     web-tests:
-        runs-on: windows-latest
+        runs-on: ubuntu-20.04
         permissions: write-all
         strategy:
             matrix:
-                browser: [chromium,firefox,webkit]
+                browser: [chromium, firefox, webkit]
             fail-fast: false
         steps:
             -   name: Checkout
