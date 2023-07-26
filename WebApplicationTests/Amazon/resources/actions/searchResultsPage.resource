@@ -4,7 +4,7 @@ Documentation       Arquivo com as funcionalidades da página de resultado de pe
 
 *** Variables ***
 ${SPAN_TITLE}       div.s-no-outline > span
-${SPAN_RESULT}      div.s-search-results > div > div > div > div > div > div > div > h2 > a
+${DIV_RESULT}       div.sg-col-inner
 
 
 *** Keywords ***
@@ -14,9 +14,9 @@ Text Should Be Displayed In The Results Page
 
 Text Should Be Displayed In The Search Result
   [Arguments]             ${TEXT}
-  Get Element Count       ${SPAN_RESULT} >> //span[contains(.,'${TEXT}')]                         \>=                     1
+  Get Element Count       ${DIV_RESULT} >> img[alt='${TEXT}']             \>=                     1
   # Scroll To Element  ${elem}
 
 Go To Product Page
   [Arguments]             ${TEXT}
-  Click                   ${SPAN_RESULT} >> //span[contains(.,'${TEXT}')]
+  Click                   ${DIV_RESULT} >> img[alt='${TEXT}']
