@@ -8,7 +8,7 @@ Suite Teardown      Close Session
 Test Setup          Go To Homepage
 Test Teardown       ScreenShot
 
-Test Tags           webtest  functional  regression
+Test Tags           webtest  functional  regression  task:retry(1)
 
 
 *** Test Cases ***
@@ -23,7 +23,7 @@ CT 01 - Access "Eletrônicos" Menu
 
 CT 02 - Search a Product
   [Documentation]  Testar a busca do produto "Pilha Recarregável" através do campo de pesquisa e validar o resultado da pesquisa
-  [Tags]                  search_product          task:retry(1)
+  [Tags]                  search_product
 
   Search By               Pilha Recarregável
   Click Search Button
@@ -32,7 +32,7 @@ CT 02 - Search a Product
 
 CT 03 - Add Product to Cart
   [Documentation]  Testar e verificar a adição de um produto no carrinho de compras
-  [Tags]                  add_cart                task:retry(1)
+  [Tags]                  add_cart
 
   Search By               Pilha Recarregável
   Click Search Button
@@ -45,7 +45,7 @@ CT 03 - Add Product to Cart
 
 CT 04 - Remove Product to Cart
   [Documentation]  Testar e verificar a remoção de um produto no carrinho de compras
-  [Tags]                  remove_cart             task:retry(1)
+  [Tags]                  remove_cart
 
   Search By               Pilha Recarregável
   Click Search Button
