@@ -33,7 +33,7 @@ jobs:
                     rfbrowser init
 
             -   name: Run RF Web Tests
-                run: robot -d ./logs_web -v BROWSER:${{ matrix.browser }} -e servicetest -e mobiletest .
+                run: robot -d ./logs_web -v BROWSER:${{ matrix.browser }} --listener RetryFailed -e servicetest -e mobiletest .
 
             -   name: Upload Tests Results
                 if: always()
