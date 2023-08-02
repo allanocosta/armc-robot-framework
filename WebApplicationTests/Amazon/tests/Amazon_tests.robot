@@ -8,7 +8,7 @@ Suite Teardown      Close Session
 Test Setup          Go To Homepage
 Test Teardown       ScreenShot
 
-Test Tags           webtest  functional  regression  task:retry(1)
+Test Tags           webtest  functional  regression  task:retry(2)
 
 
 *** Test Cases ***
