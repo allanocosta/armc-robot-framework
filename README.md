@@ -16,13 +16,16 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 
 1. Instale o [Python][Python] com o [pip][pip].
 2. Instale o [Android Studio][AndroidStudio].
+- Necessário para executar os testes mobile.
 3. Clone este projeto.
 4. Instale o [Tox][ToxInstall] ```pip install tox```.
 5. Execute o comando ```pip install core_requirements.txt``` para instalar as dependencias core do projeto.
 6. Execute o comando ```rfbrowser init``` para iniciar as dependencias do robotframework-browser.
 7. Instale o [NodeJS][NodeJS] para utilizar o Appium.
 8. Instale o [Appium 2.0][Appium2.0] ```npm install appium-installer -g```.
+- Necessário para executar os testes mobile.
 9. Instale o Appium Server e o driver uiautomator2 para execução dos testes mobile usando o ```appium-installer```
+- Necessário para executar os testes mobile.
 
 - Tenha o Java JDK11 ou superior instalado e configurado para utilizar o Appium Desktop e o Android Studio.
 
@@ -63,6 +66,14 @@ Para executar os testes Web sem o modo headless, adicione o argumento ```-v HEAD
 
 ```bash
 tox run-parallel -p 3 -e webtests -- -v HEADLESS:False .
+```
+
+### Execução dos testes sem o tox
+
+Você também pode executar os testes sem utilizar o tox. Basta utilizar os comandos nativos do robot no seu terminal.
+
+```bash
+robot -d .logs_servicetest -i servicetest .
 ```
 
 [WhatIsTox]: https://tox.wiki/en/latest/#what-is-tox
