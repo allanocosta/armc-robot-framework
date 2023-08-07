@@ -9,7 +9,11 @@ trigger:
 pool:
   vmImage: windows-latest
 strategy:
+  maxParallel: 2
   matrix:
+    browser: chromium
+    browser: firefox
+
     Python38:
       python.version: '3.8'
 
@@ -26,7 +30,7 @@ steps:
   displayName: 'Install dependencies'
 
 - bash: |
-    robot -d ./logs_web -x output-xunit.xml --listener RetryFailed -e servicetest -e mobiletest .
+    robot -d ./logs_web -x output-xunit.xml --listener RetryFailed -v BROWSER:${{matrix.browser}} -e servicetest -e mobiletest .
   continueOnError: true
   displayName: 'Run Web Tests'
 
