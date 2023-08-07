@@ -1,5 +1,5 @@
 robotframework-tidy>=4.4.0
 robotframework-robocop>=4.0.0
-robotframework>=6.0.0,<=6.1.0
+robotframework>=6.1.0
 robotframework-browser>=17.1.0
 robotframework-retryfailed>=0.2.0

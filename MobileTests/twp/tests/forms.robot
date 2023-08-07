@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Suite de testes da feature forms
 
-Resource            ${CURDIR}\\..\\resources\\base.resource
+Resource            ${CURDIR}/../resources/base.resource
 
 Suite Teardown      Finish Session
 Test Setup          Start Session

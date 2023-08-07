@@ -18,10 +18,11 @@ Projeto de testes de testes automatizados com Robot Framework integrado ao Tox e
 2. Instale o [Android Studio][AndroidStudio].
 3. Clone este projeto.
 4. Instale o [Tox][ToxInstall] ```pip install tox```.
-5. Execute o comando ```rfbrowser init``` para instalar as dependencias do robotframework-browser.
-6. Instale o [NodeJS][NodeJS] para utilizar o Appium.
-7. Instale o [Appium 2.0][Appium2.0] ```npm install appium-installer -g```.
-8. Instale o Appium Server e o driver uiautomator2 para execução dos testes mobile usando o ```appium-installer```
+5. Execute o comando ```pip install core_requirements.txt``` para instalar as dependencias core do projeto.
+6. Execute o comando ```rfbrowser init``` para iniciar as dependencias do robotframework-browser.
+7. Instale o [NodeJS][NodeJS] para utilizar o Appium.
+8. Instale o [Appium 2.0][Appium2.0] ```npm install appium-installer -g```.
+9. Instale o Appium Server e o driver uiautomator2 para execução dos testes mobile usando o ```appium-installer```
 
 - Tenha o Java JDK11 ou superior instalado e configurado para utilizar o Appium Desktop e o Android Studio.
 

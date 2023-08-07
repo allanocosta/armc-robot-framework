@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Suite de testes da home page
 
-Resource            ${CURDIR}\\..\\resources\\base.resource
+Resource            ${CURDIR}/../resources/base.resource
 
 Suite Teardown      Finish Session
 Test Setup          Start Session

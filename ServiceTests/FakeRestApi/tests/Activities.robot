@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Documentação da API: https://fakerestapi.azurewebsites.net/index.html
 
-Resource            ${CURDIR}\\..\\resources\\base.resource
+Resource            ${CURDIR}/../resources/base.resource
 
 Suite Setup         Connect To API
 
