@@ -1,14 +1,14 @@
 [tool.robotidy]
 diff = true
 spacecount = 2
-continuation-indent = 4
-line-length = 140
+continuation-indent = 2
+line-length = 150
 transform = [
 	"AddMissingEnd",
 	"AlignKeywordsSection",
 	"AlignSettingsSection",
 	"AlignTestCasesSection",
-  "AlignVariablesSection",
+    "AlignVariablesSection",
 	"DiscardEmptySections",
 	"IndentNestedKeywords",
 	"MergeAndOrderSections",
@@ -20,8 +20,9 @@ transform = [
 ]
 
 [tool.robocop]
+exclude = ["W0202"]
 configure = [
- "line-too-long:line_length:140"
+ "line-too-long:line_length:150"
 ]
 language = [
  "pt"
