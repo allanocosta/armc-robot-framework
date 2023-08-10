@@ -1,4 +1,4 @@
 robotframework-tidy>=4.4.0
 robotframework-robocop>=4.0.0
-robotframework>=6.0.0,<=6.1.0
+robotframework>=6.1.1
 robotframework-requests>=0.9.5
