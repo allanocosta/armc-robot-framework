@@ -30,7 +30,7 @@ jobs:
 
       - name: Execução dos testes mobile
         run: |
-          robot -d ./logs_mobile -e servicetest -e webtest
+          robot -d ./logs_mobile -e servicetest -e webtest .
 
       - name: Download Tests Results
         if: always()
