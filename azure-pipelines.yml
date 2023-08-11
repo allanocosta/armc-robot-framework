@@ -19,7 +19,7 @@ pool:
             - webkit
 
 steps:
-  - script: echo Running tests on $(browser)
+  - script: echo Running tests on ${{ matrix.browser }}
     displayName: 'Print Browser'
 
   - task: UsePythonVersion@0
