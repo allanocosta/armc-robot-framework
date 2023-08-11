@@ -11,7 +11,7 @@ ${APPIUM_TIMEOUT}               20
 ${AUTOMATION_NAME}              UiAutomator2
 ${PLATAFORM_NAME}               Android
 ${DEVICE_NAME}                  Android Emulator
-${APP}                          ${CURDIR}\\..\\app\\twp.apk
+${APP}                          ${CURDIR}/../app/twp.apk
 ${ANDROID_PLATFORM_VERSION}     %{ANDROID_PLATFORM_VERSION=14}
 
 
