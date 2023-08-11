@@ -12,9 +12,9 @@ pool:
   strategy:
     matrix:
       browser:
-        - chromium
-        - firefox
-        - webkit
+      - chromium
+      - firefox
+      - webkit
 
 steps:
   - bash: echo Running tests on $(browser)
