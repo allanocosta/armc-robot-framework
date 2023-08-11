@@ -9,14 +9,12 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-  jobs:
-    - job: RunRobotTests
-      strategy:
-        matrix:
-          browser:
-            - chromium
-            - firefox
-            - webkit
+  strategy:
+    matrix:
+      browser:
+        - chromium
+        - firefox
+        - webkit
 
 steps:
   - bash: echo Running tests on $(browser)
