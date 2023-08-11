@@ -16,10 +16,10 @@ jobs:
 
     steps:
       - name: Checkout do repositório
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Configuração do ambiente Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v2
         with:
           python-version: '3.10'
 
@@ -31,6 +31,15 @@ jobs:
       - name: Execução dos testes mobile
         run: |
           robot -d ./logs_mobile -e servicetest -e webtest .
+
+      - name: Upload Tests Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: results-android
+          path: ./logs_mobile
+          if-no-files-found: ignore
+          retention-days: 2
 
       - name: Download Tests Results
         if: always()
