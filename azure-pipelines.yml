@@ -17,26 +17,26 @@ strategy:
     firefox:
       BROWSER: firefox
 
-steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '$(python.version)'
-  displayName: 'Use Python $(python.version)'
+      steps:
+      - task: UsePythonVersion@0
+        inputs:
+          versionSpec: '$(python.version)'
+        displayName: 'Use Python $(python.version)'
 
-- script: |
-    python -m pip install --upgrade pip
-    pip install -r web_requirements.txt
-    rfbrowser init
-  displayName: 'Install dependencies'
+      - script: |
+          python -m pip install --upgrade pip
+          pip install -r web_requirements.txt
+          rfbrowser init
+        displayName: 'Install dependencies'
 
-- script: |
-    echo "Executando testes no $BROWSER"
-    robot -d ./logs_web -x output-xunit.xml --listener RetryFailed -v BROWSER:$BROWSER -e servicetest -e mobiletest .
-  continueOnError: true
-  displayName: 'Run Web Tests'
+      - script: |
+          echo "Executando testes no $BROWSER"
+          robot -d ./logs_web -x output-xunit.xml --listener RetryFailed -v BROWSER:$BROWSER -e servicetest -e mobiletest .
+        continueOnError: true
+        displayName: 'Run Web Tests'
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: 'logs_web/output-xunit.xml'
-  displayName: 'Publish Test Results'
+      - task: PublishTestResults@2
+        inputs:
+          testResultsFormat: 'JUnit'
+          testResultsFiles: 'logs_web/output-xunit.xml'
+        displayName: 'Publish Test Results'
