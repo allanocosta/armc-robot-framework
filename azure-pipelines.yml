@@ -10,7 +10,7 @@ jobs:
     matrix:
       browser: [ 'chromium' ]
   steps:
-  - script: echo 'Executando o job com o browser $browser'
+  - script: Executando o job com o browser $browser
   
   - job: ConfigurarAmbiente
     displayName: "Configurar ambiente"
