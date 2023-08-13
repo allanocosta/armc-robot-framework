@@ -25,7 +25,7 @@ jobs:
       displayName: "Use Python 3.10"
 
     - bash: pip install -r web_requirements.txt
-    displayName: "Install dependencies"
+    displayName: 'Install dependencies'
 
   - job: RunTests
     displayName: "Run Web Tests"
