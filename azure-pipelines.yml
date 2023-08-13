@@ -13,7 +13,7 @@ jobs:
   - job: Run Mobile Testa
     strategy:
       matrix:
-        browser: [chromium, firefox, webkit]
+        browser: ['chromium', 'firefox', 'webkit']
 
     - job: ConfigureEnv
       displayName: "Print Browsers"
