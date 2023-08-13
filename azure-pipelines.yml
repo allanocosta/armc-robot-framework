@@ -10,7 +10,6 @@ jobs:
   - job: Run Mobile Testa
     strategy:
       matrix:
-        browser:
-        - chromium
+        browser: chromium
     steps:
     - script: echo "Executando o job no $browser"
