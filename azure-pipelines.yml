@@ -5,7 +5,7 @@ jobs:
 - job: Setup
   strategy:
     matrix:
-      browser: 'chromium'
+      browser: chromium
   steps:
   - script: echo "Running job with browser $browser"
   
