@@ -1,15 +1,39 @@
-# Python package
-# Create and test a Python package on multiple Python versions.
-# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/python
 trigger:
-  - '*'
+- main
+
 pr:
-  - none
+- none
+
 jobs:
-  - job: Run Mobile Testa
-    strategy:
-      matrix:
-        browser: chromium
+- job: MeuJob
+  strategy:
+    matrix:
+      browser: [ 'chromium' ]
+  steps:
+  - script: echo "Executando o job com o browser $browser"
+  
+  - job: ConfigurarAmbiente
+    displayName: "Configurar ambiente"
+    pool:
+      vmImage: 'ubuntu-latest'
     steps:
-    - script: echo "Executando o job no $browser"
+    - script: echo "Configurando ambiente no Ubuntu"
+    
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '3.x'
+        addToPath: true
+      displayName: "Instalar e usar o Python"
+      
+    - script: pip install -r requirements.txt
+      displayName: "Instalar dependências do requirements.txt"
+      
+  - job: ExecutarTestesWeb
+    displayName: "Executar testes web"
+    dependsOn: ConfigurarAmbiente
+    steps:
+    - script: echo "Executando testes web com o browser $browser"
+    
+    - script: |
+        robot -d TestResults --variable BROWSER:$browser Tests
+      displayName: "Executar testes Robot Framework"
