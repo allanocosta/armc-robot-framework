@@ -1,39 +1,36 @@
 trigger:
 - '*'
 
-pr:
-- none
-
 jobs:
-- job: MeuJob
+- job: Setup
   strategy:
     matrix:
-      browser: [ 'chromium' ]
+      browser: ['chromium']
   steps:
-  - script: Executando o job com o browser $browser
+  - script: echo "Running job with browser $browser"
   
-  - job: ConfigurarAmbiente
-    displayName: "Configurar ambiente"
+  - job: ConfigureEnvironment
+    displayName: "Configure Environment"
     pool:
       vmImage: 'ubuntu-latest'
     steps:
-    - script: echo "Configurando ambiente no Ubuntu"
+    - script: echo "Configuring environment on Ubuntu"
     
     - task: UsePythonVersion@0
       inputs:
-        versionSpec: '3.x'
+        versionSpec: '3.10'
         addToPath: true
-      displayName: "Instalar e usar o Python"
+      displayName: "Install and use Python"
       
     - script: pip install -r requirements.txt
-      displayName: "Instalar dependências do requirements.txt"
+      displayName: "Install dependencies from requirements.txt"
       
-  - job: ExecutarTestesWeb
-    displayName: "Executar testes web"
-    dependsOn: ConfigurarAmbiente
+  - job: RunWebTests
+    displayName: "Run web tests"
+    dependsOn: ConfigureEnvironment
     steps:
-    - script: echo "Executando testes web com o browser $browser"
+    - script: echo "Running web tests with browser $browser"
     
     - script: |
         robot -d TestResults --variable BROWSER:$browser Tests
-      displayName: "Executar testes Robot Framework"
+      displayName: "Execute Robot Framework tests"
