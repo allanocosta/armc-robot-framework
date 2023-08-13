@@ -5,6 +5,10 @@
 
 trigger:
   - '*'
+
+pr:
+  - none
+
 jobs:
   - job: Run Mobile Testa
     strategy:
@@ -15,7 +19,6 @@ jobs:
       displayName: "Print Browsers"
       pool:
         vmImage: 'ubuntu-latest'
-
       steps:
       - script: echo "Executando o job nos navegadores $browser"
       - task: UsePythonVersion@0
@@ -24,7 +27,7 @@ jobs:
           addToPath: true
         displayName: "Use Python 3.10"
 
-      - bash: pip install -r web_requirements.txt
+      - script: pip install -r web_requirements.txt
 
     - job: RunTests
       displayName: "Run Web Tests"
