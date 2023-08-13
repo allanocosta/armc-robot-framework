@@ -32,7 +32,7 @@ jobs:
       python -m pip install --upgrade pip
       pip install -r web_requirements.txt
       rfbrowser init
-    displayName: 'Install dependencies'
+    displayName: "Install dependencies"
 
   - job: RunTests
     displayName: "Run Web Tests"
