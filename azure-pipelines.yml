@@ -24,7 +24,7 @@ jobs:
         addToPath: true
       displayName: "Use Python 3.10"
 
-    - bash: pip install -r web_requirements.txt
+      - bash: pip install -r web_requirements.txt
 
     - job: RunTests
       displayName: "Run Web Tests"
