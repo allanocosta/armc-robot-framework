@@ -27,10 +27,11 @@ jobs:
     - bash: pip install -r web_requirements.txt
 
   - job: RunTests
-    displayName: "Run Web Tests"
-    dependsOn: ConfigureEnv
-    - bash: robot -d ./logs_web -x output-xunit.xml --listener RetryFailed --variable BROWSER:$browser -e servicetest -e mobiletest .
-    continueOnError: true
+    - steps:
+      displayName: "Run Web Tests"
+      dependsOn: ConfigureEnv
+      - bash: robot -d ./logs_web -x output-xunit.xml --listener RetryFailed --variable BROWSER:$browser -e servicetest -e mobiletest .
+      continueOnError: true
 
   - job: PublishTestResults@2
     dependsOn: RunTests
