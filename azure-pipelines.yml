@@ -24,9 +24,7 @@ jobs:
         addToPath: true
       displayName: "Use Python 3.10"
 
-    - script: |
-      pip install -r web_requirements.txt
-      rfbrowser init
+    - script: pip install -r web_requirements.txt
     displayName: "Install dependencies"
 
   - job: RunTests
