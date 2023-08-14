@@ -71,10 +71,6 @@ jobs:
       displayName: Run Web Test
       continueOnError: true
 
-    - task: DownloadPipelineArtifacts@2
-      inputs:
-        artifactName: test-results
-
     - task: PublishTestResults@2
       inputs:
         testResultsFormat: 'JUnit'
