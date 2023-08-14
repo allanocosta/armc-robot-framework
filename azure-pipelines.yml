@@ -6,17 +6,15 @@ pool:
 
 strategy:
   matrix:
-    Python310:
-      python.version: '3.10'
-      Chromium:
-        browser: 'chromium'
-      Firefox:
-        browser: 'firefox'
+    Chromium:
+      browser: 'chromium'
+    Firefox:
+      browser: 'firefox'
 
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '$(python.version)'
+    versionSpec: '3.10'
     addToPath: true
 
 - script: |
