@@ -20,6 +20,7 @@ steps:
 - script: |
     pip install robotframework
     pip install robotframework-browser
+    pip install rfbrowser init
     pip install webdrivermanager
     webdrivermanager firefox chrome --linkpath /usr/local/bin
   displayName: Install dependencies
