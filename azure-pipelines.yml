@@ -24,3 +24,7 @@ steps:
     pip install robotframework-browser
     pip install webdrivermanager
     webdrivermanager firefox chrome --linkpath /usr/local/bin
+  displayName: Install dependencies
+
+- script: robot -d ./logs -i get_an_activity .
+  displayName: Run Web Test
