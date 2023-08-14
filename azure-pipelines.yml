@@ -24,5 +24,5 @@ steps:
     webdrivermanager firefox chrome --linkpath /usr/local/bin
   displayName: Install dependencies
 
-- script: robot -d ./logs_web -i get_an_activity .
+- script: robot -d ./logs_web -v BROWSER:$(browser) -e servicetest -e mobiletest .
   displayName: Run Web Test
