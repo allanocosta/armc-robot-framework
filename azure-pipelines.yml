@@ -8,10 +8,10 @@ strategy:
   matrix:
     Python310:
       python.version: '3.10'
-    Chromium:
-      browser: 'chromium'
-    Firefox:
-      browser: 'firefox'
+      Chromium:
+        browser: 'chromium'
+      Firefox:
+        browser: 'firefox'
 
 steps:
 - task: UsePythonVersion@0
@@ -26,5 +26,5 @@ steps:
     webdrivermanager firefox chrome --linkpath /usr/local/bin
   displayName: Install dependencies
 
-- script: robot -d ./logs -i get_an_activity .
+- script: robot -d ./logs_web -i get_an_activity .
   displayName: Run Web Test
