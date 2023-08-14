@@ -5,6 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 strategy:
+  maxParallel: 2
   matrix:
     Chromium:
       browser: 'chromium'
