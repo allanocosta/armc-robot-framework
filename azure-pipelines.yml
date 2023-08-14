@@ -18,11 +18,9 @@ steps:
     addToPath: true
 
 - script: |
-    pip install robotframework
-    pip install robotframework-browser
+    python -m pip install --upgrade pip
+    pip install -r web_requirements.txt
     pip install rfbrowser init
-    pip install webdrivermanager
-    webdrivermanager firefox chrome --linkpath /usr/local/bin
   displayName: Install dependencies
 
 - script: robot -d ./logs_web -v BROWSER:$(browser) -e servicetest -e mobiletest .
