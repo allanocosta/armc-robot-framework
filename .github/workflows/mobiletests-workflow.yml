@@ -1,62 +1,40 @@
-name: Run Mobile Tests
-
-run-name: On Push - Mobile Tests Run
+name: Teste Mobile Android
 
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
+      - feature/*
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions: write-all
-    strategy:
-      fail-fast: false
-
     steps:
-      - name: Checkout do repositório
-        uses: actions/checkout@v3
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'oracle'
-          java-version: 17
-
-      - name: Configuração do ambiente Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: Instalação de dependências
+      - uses: actions/checkout@v2
+      - name: Install Docker
         run: |
-          python -m pip install --upgrade pip
-          pip install -r mobile_requirements.txt
-
-      - name: Execução dos testes mobile
+          sudo apt-get update
+          sudo apt-get install docker
+      - name: Build Docker image
         run: |
-          robot -d ./logs_mobile -e servicetest -e webtest .
+          docker build -t test-mobile-android .
+      - name: Run tests
+        run: |
+          docker run -it --rm test-mobile-android
 
-      - name: Upload Tests Results
-        if: always()
-        uses: actions/upload-artifact@v3
+  report:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download test results
+        run: |
+          wget -O results.xml localhost:4723/wd/hub/session/1/element/1/screenshot
+      - name: Upload test results to S3
+        uses: actions/upload-artifact@v2
         with:
-          name: results-android
-          path: ./logs_mobile
-          if-no-files-found: ignore
-          retention-days: 2
-
-      - name: Download Tests Results
-        if: always()
-        uses: actions/download-artifact@v1
-        with:
-          name: results-android
-
-      - name: Send Report
-        if: always()
-        uses: joonvena/robotframework-reporter-action@v2.1
-        with:
-          report_path: results-android
-          gh_access_token: ${{ secrets.GITHUB_TOKEN }}
-          show_passed_tests: false
+          name: test-results
+          path: results.xml
