@@ -1,0 +1,78 @@
+trigger: none
+
+pr:
+ branches:
+  include:
+  - main
+  - develop
+  - feature/*
+
+variables:
+  python.version: '3.10'
+
+jobs:
+  - job: RunOnUbuntu
+    pool:
+      vmImage: 'ubuntu-latest'
+    strategy:
+      matrix:
+        Chromium:
+          browser: 'chromium'
+        Firefox:
+          browser: 'firefox'
+
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '$(python.version)'
+        addToPath: true
+      displayName: Install Python $(python.version)
+
+    - script: |
+        python -m pip install --upgrade pip
+        pip install -r web_requirements.txt
+        rfbrowser init
+      displayName: Update Python and Install Dependencies
+
+    - script: robot -d ./logs_web -x output-xunit.xml -v BROWSER:$(browser) --listener RetryFailed -e servicetest -e mobiletest .
+      displayName: Run Web Test
+      continueOnError: true
+
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: 'logs_web/output-xunit.xml'
+      displayName: 'Publish Test Results'
+
+  - job: RunOnMacOS
+    pool:
+      vmImage: 'macOS-latest'
+    strategy:
+      matrix:
+        Chromium:
+          browser: 'chromium'
+        Webkit:
+          browser: 'webkit'
+
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '$(python.version)'
+        addToPath: true
+      displayName: Install Python $(python.version)
+
+    - script: |
+        python -m pip install --upgrade pip
+        pip install -r web_requirements.txt
+        rfbrowser init
+      displayName: Update Python and Install Dependencies
+
+    - script: robot -d ./logs_web -x output-xunit.xml -v BROWSER:$(browser) --listener RetryFailed -e servicetest -e mobiletest .
+      displayName: Run Web Test
+      continueOnError: true
+
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: 'logs_web/output-xunit.xml'
+      displayName: 'Publish Test Results'
