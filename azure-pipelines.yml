@@ -25,6 +25,5 @@ steps:
     pip install webdrivermanager
     webdrivermanager firefox chrome --linkpath /usr/local/bin
 
-- script: | 
-    robot --variable BROWSER:${{ matrix.browser }} tests/
+- script: robot --variable BROWSER:${{ matrix.browser }} tests/
   displayName: 'Run tests'
