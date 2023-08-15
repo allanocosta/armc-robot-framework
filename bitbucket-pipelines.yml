@@ -7,7 +7,7 @@ pipelines:
         script:
           - apt-get update
           - apt-get install -y curl python3 python3-pip
-          - curl -sL https://deb.nodesource.com/setup_14.x | bash -
+          - curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
           - apt-get install -y nodejs
           - export PATH="$PATH:/usr/bin/npm:/usr/bin/npx"
           - pip3 install robotframework-browser
