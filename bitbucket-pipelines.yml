@@ -18,10 +18,13 @@ pipelines:
             - robot -d ./logs_web -x output-xunit.xml -v BROWSER:firefox --listener RetryFailed -e servicetest -e mobiletest .
           artifacts:
             - logs_web/output-xunit.xml
+    - parallel:
       - step:
           name: RunOnMacOS
           image: python:3.10
           script:
+            - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+            - export PATH=$PATH:/usr/local/bin:/opt/homebrew/bin
             - brew install nodejs npm
             - export PATH=$PATH:/usr/local/bin
             - sudo npm install @playwright/test
