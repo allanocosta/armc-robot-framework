@@ -27,10 +27,3 @@ jobs:
       - name: Run tests
         run: |
           robot -l junit --output results.xml tests/
-
-    after_success:
-      - name: Upload test results
-        uses: actions/upload-artifact@v1
-        with:
-          name: results
-          path: results.xml
