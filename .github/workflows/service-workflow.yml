@@ -1,4 +1,4 @@
-name: Run Web Tests
+name: Run Service Tests
 run-name: On Push - Service Tests Run
 on: [push]
 
