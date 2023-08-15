@@ -10,12 +10,12 @@ pipelines:
           - curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
           - apt-get install -y nodejs
           - export PATH="$PATH:/usr/bin/npm:/usr/bin/npx"
+          - cd /usr/local/bin/
+          - ls
           - npm install -g npx
           - pip3 install robotframework-browser
           - npx playwright install
           - rfbrowser init
-          - cd /usr/local/bin/
-          - ls
 
 pr:
   branches:
