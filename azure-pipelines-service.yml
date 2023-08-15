@@ -25,7 +25,6 @@ jobs:
     - script: |
         python -m pip install --upgrade pip
         pip install -r service_requirements.txt
-        rfbrowser init
       displayName: Update Python and Install Dependencies
 
     - script: robot -d ./logs_service -x output-xunit.xml --listener RetryFailed -e webtest -e mobiletest .
