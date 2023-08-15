@@ -26,13 +26,10 @@ pipelines:
         artifacts:
           - logs_web/output-xunit.xml
 
-  branches:
-    main:
-      - main
-
-    develop:
-      - develop
-
-    feature/*:
-      - feature/*
+  pr:
+    branches:
+      include:
+        - main
+        - develop
+        - feature/*
 
