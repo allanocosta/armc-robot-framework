@@ -1,40 +1,39 @@
-name: Teste Mobile Android
+name: Android Test
 
 on:
-  pull_request:
-    branches:
-      - main
   push:
     branches:
-      - main
-      - feature/*
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
-      - name: Install Docker
+
+      - name: Set up Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Install Appium
         run: |
           sudo apt-get update
-          sudo apt-get install docker
-      - name: Build Docker image
+          sudo apt-get install -y appium
+
+      - name: Install Robot Framework
         run: |
-          docker build -t test-mobile-android .
+          pip install robotframework
+          pip install robotframework-appium
+
       - name: Run tests
         run: |
-          docker run -it --rm test-mobile-android
+          robot -l junit --output results.xml tests/
 
-  report:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - uses: actions/checkout@v2
-      - name: Download test results
-        run: |
-          wget -O results.xml localhost:4723/wd/hub/session/1/element/1/screenshot
-      - name: Upload test results to S3
-        uses: actions/upload-artifact@v2
+    after_success:
+      - name: Upload test results
+        uses: actions/upload-artifact@v1
         with:
-          name: test-results
+          name: results
           path: results.xml
