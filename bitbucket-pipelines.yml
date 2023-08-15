@@ -7,7 +7,7 @@ pipelines:
         image: ubuntu:latest
         script:
           - export PATH=$PATH:/usr/local/bin
-          - apt-get update && apt-get install -y python3-pip
+          - apt-get update && apt-get install -y python3-pip nodejs npm
           - pip3 install --upgrade pip
           - pip3 install -r web_requirements.txt
           - rfbrowser init
@@ -19,6 +19,7 @@ pipelines:
         name: RunOnMacOS
         image: python:3.10
         script:
+          - brew install nodejs npm
           - export PATH=$PATH:/usr/local/bin
           - pip install --upgrade pip
           - pip install -r web_requirements.txt
