@@ -1,9 +1,6 @@
 name: Android Test
 
-on:
-  push:
-    branches:
-      - '*'
+on: [push]
 
 jobs:
   build:
