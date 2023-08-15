@@ -9,8 +9,8 @@ pipelines:
           script:
             - export PATH=$PATH:/usr/local/bin
             - apt-get update && apt-get install -y python3-pip nodejs npm
-            - sudo npm install @playwright/test
-            - sudo npx playwright install-deps
+            - npm install @playwright/test
+            - npx playwright install-deps
             - pip install --upgrade pip
             - pip install -r web_requirements.txt
             - rfbrowser init
@@ -27,8 +27,8 @@ pipelines:
             - export PATH=$PATH:/usr/local/bin:/opt/homebrew/bin
             - brew install nodejs npm
             - export PATH=$PATH:/usr/local/bin
-            - sudo npm install @playwright/test
-            - sudo npx playwright install-deps
+            - npm install @playwright/test
+            - npx playwright install-deps
             - pip install --upgrade pip
             - pip install -r web_requirements.txt
             - rfbrowser init
