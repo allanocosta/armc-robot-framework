@@ -4,7 +4,7 @@ pipelines:
   default:
     - step:
         name: Install dependencies
-        bash:
+        script:
           - apt-get update
           - apt-get install -y curl python3 python3-pip
           - curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
