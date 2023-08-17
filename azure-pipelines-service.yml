@@ -1,0 +1,39 @@
+trigger: 
+  - main
+
+pr:
+ branches:
+  include:
+  - main
+  - develop
+  - feature/*
+
+variables:
+  python.version: '3.10'
+
+jobs:
+  - job: RunOnUbuntu
+    pool:
+      vmImage: 'ubuntu-latest'
+
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '$(python.version)'
+        addToPath: true
+      displayName: Install Python $(python.version)
+
+    - script: |
+        python -m pip install --upgrade pip
+        pip install -r service_requirements.txt
+      displayName: Update Python and Install Dependencies
+
+    - script: robot -d ./logs_service -x output-xunit.xml --listener RetryFailed -e webtest -e mobiletest .
+      displayName: Run Service Test
+      continueOnError: true
+
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: 'logs_service/output-xunit.xml'
+      displayName: 'Publish Test Results'
