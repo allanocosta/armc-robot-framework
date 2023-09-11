@@ -3,7 +3,7 @@ run-name: On Push - Service Tests Run
 on: [push]
 
 jobs:
-  web-tests:
+  service-tests:
     runs-on: ubuntu-20.04
     permissions: write-all
     strategy:
