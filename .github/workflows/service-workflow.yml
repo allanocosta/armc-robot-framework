@@ -22,7 +22,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -U -r service_requirements.txt
 
-      - name: Run RF Web Tests
+      - name: Run RF Service Tests
         run: robot -d ./logs_service --listener RetryFailed -e webtest -e mobiletest .
 
       - name: Upload Tests Results
