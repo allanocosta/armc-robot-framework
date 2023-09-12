@@ -50,7 +50,7 @@ tox run-parallel -p 3 -e mobiletests-local -- .
 tox run-parallel -p 3 -e webtests-local -- .
 ```
 
-- NOTA: Caso não queira executar os testes em paralelo, remova o argumento ```run-parallel``` na execução.
+- NOTA: Caso não queira executar os testes em paralelo, remova o argumento ```run-parallel -p 3``` na execução.
 
 Você pode utilizar o argumento ```-i <FEATURE_TAG>``` para executar apenas os testes com as tags específicas. Lembre-se de passar as variáveis do tox que contém as TAGs no argumento de execução.
 
@@ -58,6 +58,14 @@ Você pode utilizar o argumento ```-i <FEATURE_TAG>``` para executar apenas os t
 
 ```bash
 tox run-parallel -p 3 -e mobiletests-local -- -i home .
+```
+
+Para recriar o ambiente a cada execução, adicione o argumento ```--recreate``` ou ```-r``` no `preargs`.
+
+### Exemplo de execução recriando o ambiente
+
+```bash
+tox run-parallel -p 3 -r -e servicetests-local -- .
 ```
 
 Para executar os testes Web sem o modo headless, adicione o argumento ```-v HEADLESS:False``` na linha de comando.
@@ -75,6 +83,10 @@ Você também pode executar os testes sem utilizar o tox. Basta utilizar os coma
 ```bash
 robot -d .logs_servicetest -i servicetest .
 ```
+
+### Logs de execução
+
+Os logs de execução do robot serão criados no ambiente criado pelo tox no diretório `.tox`
 
 [WhatIsTox]: https://tox.wiki/en/latest/#what-is-tox
 [RobotidyIntroduction]: https://robotidy.readthedocs.io/en/stable/#introduction

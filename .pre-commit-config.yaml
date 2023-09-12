@@ -1,4 +1,0 @@
--   repo: git://dev.azure.com/allanoc/Portif%C3%B3lios/_git/armc-robot-framework
-    rev: ''  # use the sha / tag you want to point at
-    hooks:
-    -   id: robotframework-tidy-wrapper
